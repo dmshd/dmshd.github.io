@@ -2,7 +2,7 @@
 layout: post
 title:  "Pomodoro dans le terminal"
 date:   2021-03-25 19:34:00 +0100
-categories: Dev, IT, Terminal, Ubuntu
+categories: Dev IT Terminal Ubuntu
 ---
 
 Marre de ne pas trouver l'application pomodoro de tes rêves ?
