@@ -2,6 +2,7 @@
 layout: post
 title: Comment échanger une cryptomonnaie sur Binance (débutants)
 date: 2021-03-27 13:16 +0100
+categories: binance echange cryptomonnaies tuto video
 ---
 
 Voici comment échanger des cryptommonaies sur Binane (application mobile).
