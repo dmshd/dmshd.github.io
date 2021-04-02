@@ -13,7 +13,7 @@ Il serait judicieux de garder une somme non investie, en réserve en cas de dip.
 Lors d'une tendance haussière longue, le cours d'un actif financier, qu'il soit crypto ou traditionnel, oscille. To buy the dip permet de tirer parti des baisses, dans l'espoir (appuyé par une analyse technique et une connaissance des fondamentaux) que le cours continue son ascencion de plus belle après avoir repris des couleurs (vertes, de préférence).
 
 
-{% include image.html url="/images/que-signifie-acheter-le-dip.jpg" description="Market cap du Sentivate au 27 mars 2021 - Daniel Muyshond 2021" %}
+{% include image.html url="/images/que-signifie-acheter-le-dip.jpg" description="Illustration - Acheter le dip / to buy the dip" %}
 
 
 Photo by <a href="https://unsplash.com/@claybanks?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Clay Banks</a> on <a href="https://unsplash.com/s/photos/trading-dip?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
