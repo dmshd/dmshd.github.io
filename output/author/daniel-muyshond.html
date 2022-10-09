@@ -5,38 +5,47 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="generator" content="Pelican" />
         <title>impavi.de - Daniel Muyshond</title>
-        <link rel="stylesheet" href="https://dmshd.github.io/theme/css/main.css" />
+        <link rel="stylesheet" href="http://www.impavi.de/theme/css/main.css" />
 </head>
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="https://dmshd.github.io/">impavi.de</a></h1>
+                <h1><a href="http://www.impavi.de/">impavi.de</a></h1>
                 <nav><ul>
-                    <li><a href="https://dmshd.github.io/category/pelican.html">Pelican</a></li>
-                    <li><a href="https://dmshd.github.io/category/snippets.html">Snippets</a></li>
-                    <li><a href="https://dmshd.github.io/category/web-tricks-using-python.html">Web tricks using Python</a></li>
+                    <li><a href="http://www.impavi.de/category/dev-tricks.html">Dev tricks</a></li>
+                    <li><a href="http://www.impavi.de/category/pelican.html">Pelican</a></li>
+                    <li><a href="http://www.impavi.de/category/snippets.html">Snippets</a></li>
+                    <li><a href="http://www.impavi.de/category/web-tricks-using-python.html">Web tricks using Python</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="https://dmshd.github.io/how-to-upgrade-pelican-to-the-latest-version.html">How to upgrade Pelican to the latest version</a></h1>
+                    <h1 class="entry-title"><a href="http://www.impavi.de/develop-with-the-minecraft-font-in-your-ide.html">Develop with the Minecraft font in your IDE</a></h1>
 <footer class="post-info">
         <abbr class="published" title="2022-10-09T00:00:00+02:00">
                 Published: dim 09 octobre 2022
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://dmshd.github.io/author/daniel-muyshond.html">Daniel Muyshond</a>
+                By                         <a class="url fn" href="http://www.impavi.de/author/daniel-muyshond.html">Daniel Muyshond</a>
         </address>
-<p>In <a href="https://dmshd.github.io/category/pelican.html">Pelican</a>.</p>
-<p>tags: <a href="https://dmshd.github.io/tag/python.html">python</a> <a href="https://dmshd.github.io/tag/ssg.html">ssg</a> <a href="https://dmshd.github.io/tag/pelican.html">pelican</a> <a href="https://dmshd.github.io/tag/upgrade.html">upgrade</a> <a href="https://dmshd.github.io/tag/package.html">package</a> <a href="https://dmshd.github.io/tag/pip.html">pip</a> </p>
-</footer><!-- /.post-info --><h2>Upgrading pelican ssg python package</h2>
-<p>Here is the command to get <a href="https://docs.getpelican.com/en/latest">the latest pelican version</a>.</p>
-<div class="highlight"><pre><span></span><code>python -m pip install --upgrade pelican
+<p>In <a href="http://www.impavi.de/category/dev-tricks.html">Dev tricks</a>.</p>
+<p>tags: <a href="http://www.impavi.de/tag/python.html">python</a> <a href="http://www.impavi.de/tag/ide.html">IDE</a> <a href="http://www.impavi.de/tag/minecraft.html">Minecraft</a> <a href="http://www.impavi.de/tag/font.html">font</a> <a href="http://www.impavi.de/tag/code.html">code</a> <a href="http://www.impavi.de/tag/programming.html">programming</a> </p>
+</footer><!-- /.post-info --><h2>Minecraft font in your IDE</h2>
+<p>I just found out that you can use the Minecraft font in your IDE, it's pretty cool.</p>
+<h2>Where to find the Minecraft font</h2>
+<p>You can find the Minecraft font on <a href="https://www.dafont.com/minecraft.font">this website</a>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">daniel</span><span class="nv">@debian</span><span class="err">:</span><span class="o">~/</span><span class="p">.</span><span class="k">local</span><span class="o">/</span><span class="n">share</span><span class="err">$</span><span class="w"> </span><span class="n">mkdir</span><span class="w"> </span><span class="n">fonts</span><span class="w"></span>
+<span class="n">daniel</span><span class="nv">@debian</span><span class="err">:</span><span class="o">~/</span><span class="p">.</span><span class="k">local</span><span class="o">/</span><span class="n">share</span><span class="err">$</span><span class="w"> </span><span class="n">cd</span><span class="w"> </span><span class="o">-</span><span class="w"></span>
+<span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">daniel</span><span class="o">/</span><span class="n">Téléchargements</span><span class="w"></span>
+<span class="n">daniel</span><span class="nv">@debian</span><span class="err">:</span><span class="o">~/</span><span class="n">Téléchargements</span><span class="err">$</span><span class="w"> </span><span class="n">mv</span><span class="w"> </span><span class="n">Monocraft</span><span class="p">.</span><span class="n">otf</span><span class="w"> </span><span class="o">~/</span><span class="p">.</span><span class="k">local</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">fonts</span><span class="w"></span>
 </code></pre></div>
 
-<p>source : https://docs.getpelican.com/en/latest/install.html#upgrading</p>                </article>
+<p>Linux</p>
+<p>Download the most recent Monocraft.otf file from the Releases page. Move the file to ~/.local/share/fonts (create the folder if it doesn't already exist). In a terminal, run fc-cache -fv. Alternatively, log out and l    og in again.</p>
+<p>Source :
+https://github.com/IdreesInc/Monocraft#linux</p>                </article>
             </aside><!-- /#featured -->
                 <section id="content" class="body">
                     <h1>Other articles</h1>
@@ -45,7 +54,29 @@
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="https://dmshd.github.io/how-to-fetch-youtube-subs-using-python-and-youtube-transcript-api-pip-pkg.html" rel="bookmark"
+                    <h1><a href="http://www.impavi.de/how-to-upgrade-pelican-to-the-latest-version.html" rel="bookmark"
+                           title="Permalink to How to upgrade Pelican to the latest version">How to upgrade Pelican to the latest version</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2022-10-09T00:00:00+02:00">
+                Published: dim 09 octobre 2022
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="http://www.impavi.de/author/daniel-muyshond.html">Daniel Muyshond</a>
+        </address>
+<p>In <a href="http://www.impavi.de/category/pelican.html">Pelican</a>.</p>
+<p>tags: <a href="http://www.impavi.de/tag/python.html">python</a> <a href="http://www.impavi.de/tag/ssg.html">ssg</a> <a href="http://www.impavi.de/tag/pelican.html">pelican</a> <a href="http://www.impavi.de/tag/upgrade.html">upgrade</a> <a href="http://www.impavi.de/tag/package.html">package</a> <a href="http://www.impavi.de/tag/pip.html">pip</a> </p>
+</footer><!-- /.post-info -->                <p>You did not open your pelican repository since a long time and maybe it's time to upgrade.</p>
+                <a class="readmore" href="http://www.impavi.de/how-to-upgrade-pelican-to-the-latest-version.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://www.impavi.de/how-to-fetch-youtube-subs-using-python-and-youtube-transcript-api-pip-pkg.html" rel="bookmark"
                            title="Permalink to How to Fetch YouTube subs using Python and youtube-transcript-api (pip pkg)">How to Fetch YouTube subs using Python and youtube-transcript-api (pip pkg)</a></h1>
                 </header>
 
@@ -56,18 +87,18 @@
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://dmshd.github.io/author/daniel-muyshond.html">Daniel Muyshond</a>
+                By                         <a class="url fn" href="http://www.impavi.de/author/daniel-muyshond.html">Daniel Muyshond</a>
         </address>
-<p>In <a href="https://dmshd.github.io/category/web-tricks-using-python.html">Web tricks using Python</a>.</p>
-<p>tags: <a href="https://dmshd.github.io/tag/python.html">python</a> <a href="https://dmshd.github.io/tag/web.html">web</a> <a href="https://dmshd.github.io/tag/youtube.html">YouTube</a> <a href="https://dmshd.github.io/tag/transcription.html">Transcription</a> <a href="https://dmshd.github.io/tag/video.html">video</a> <a href="https://dmshd.github.io/tag/subtitles.html">subtitles</a> </p>
+<p>In <a href="http://www.impavi.de/category/web-tricks-using-python.html">Web tricks using Python</a>.</p>
+<p>tags: <a href="http://www.impavi.de/tag/python.html">python</a> <a href="http://www.impavi.de/tag/web.html">web</a> <a href="http://www.impavi.de/tag/youtube.html">YouTube</a> <a href="http://www.impavi.de/tag/transcription.html">Transcription</a> <a href="http://www.impavi.de/tag/video.html">video</a> <a href="http://www.impavi.de/tag/subtitles.html">subtitles</a> </p>
 </footer><!-- /.post-info -->                <p>It is a small test of that python package that allows to fetch YouTube subtitles, even if they are automated, which is pretty cool.</p>
-                <a class="readmore" href="https://dmshd.github.io/how-to-fetch-youtube-subs-using-python-and-youtube-transcript-api-pip-pkg.html">read more</a>
+                <a class="readmore" href="http://www.impavi.de/how-to-fetch-youtube-subs-using-python-and-youtube-transcript-api-pip-pkg.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="https://dmshd.github.io/mon-premier-blog-post-automatise.html" rel="bookmark"
+                    <h1><a href="http://www.impavi.de/mon-premier-blog-post-automatise.html" rel="bookmark"
                            title="Permalink to Mon premier blog post automatisé">Mon premier blog post automatisé</a></h1>
                 </header>
 
@@ -78,12 +109,12 @@
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://dmshd.github.io/author/daniel-muyshond.html">Daniel Muyshond</a>
+                By                         <a class="url fn" href="http://www.impavi.de/author/daniel-muyshond.html">Daniel Muyshond</a>
         </address>
-<p>In <a href="https://dmshd.github.io/category/snippets.html">Snippets</a>.</p>
-<p>tags: <a href="https://dmshd.github.io/tag/github.html">github</a> <a href="https://dmshd.github.io/tag/python.html">python</a> <a href="https://dmshd.github.io/tag/pelican.html">pelican</a> </p>
+<p>In <a href="http://www.impavi.de/category/snippets.html">Snippets</a>.</p>
+<p>tags: <a href="http://www.impavi.de/tag/github.html">github</a> <a href="http://www.impavi.de/tag/python.html">python</a> <a href="http://www.impavi.de/tag/pelican.html">pelican</a> </p>
 </footer><!-- /.post-info -->                <p>J'ai suivi un guide pour configurer l'intégration continue automatique (CD) d'un site web statique généré par Pelican (Python) sur GitHub Pages en utilisant les GitHub Actions.</p>
-                <a class="readmore" href="https://dmshd.github.io/mon-premier-blog-post-automatise.html">read more</a>
+                <a class="readmore" href="http://www.impavi.de/mon-premier-blog-post-automatise.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
                 </ol><!-- /#posts-list -->
@@ -94,16 +125,14 @@
                         <ul>
                             <li><a href="https://getpelican.com/">Pelican</a></li>
                             <li><a href="https://www.python.org/">Python.org</a></li>
-                            <li><a href="https://palletsprojects.com/p/jinja/">Jinja2</a></li>
-                            <li><a href="#">You can modify those links in your config file</a></li>
                         </ul>
                 </div><!-- /.blogroll -->
                 <div class="social">
                         <h2>social</h2>
                         <ul>
 
-                            <li><a href="#">You can add links in your config file</a></li>
-                            <li><a href="#">Another social link</a></li>
+                            <li><a href="https://www.youtube.com/c/DanielMuyshond">YouTube</a></li>
+                            <li><a href="https://www.instagram.com/d.mshd_/">Instagram</a></li>
                         </ul>
                 </div><!-- /.social -->
         </section><!-- /#extras -->
