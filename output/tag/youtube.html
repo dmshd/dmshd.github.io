@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="generator" content="Pelican" />
-        <title>impavi.de - github</title>
+        <title>impavi.de - YouTube</title>
         <link rel="stylesheet" href="https://dmshd.github.io/theme/css/main.css" />
 </head>
 
@@ -20,19 +20,38 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="https://dmshd.github.io/mon-premier-blog-post-automatise.html">Mon premier blog post automatisé</a></h1>
+                    <h1 class="entry-title"><a href="https://dmshd.github.io/how-to-fetch-youtube-subs-using-python-and-youtube-transcript-api-pip-pkg.html">How to Fetch YouTube subs using Python and youtube-transcript-api (pip pkg)</a></h1>
 <footer class="post-info">
-        <abbr class="published" title="2022-05-22T00:00:00+02:00">
-                Published: dim 22 mai 2022
+        <abbr class="published" title="2022-06-09T00:00:00+02:00">
+                Published: jeu 09 juin 2022
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="https://dmshd.github.io/author/daniel-muyshond.html">Daniel Muyshond</a>
         </address>
-<p>In <a href="https://dmshd.github.io/category/snippets.html">Snippets</a>.</p>
-<p>tags: <a href="https://dmshd.github.io/tag/github.html">github</a> <a href="https://dmshd.github.io/tag/python.html">python</a> <a href="https://dmshd.github.io/tag/pelican.html">pelican</a> </p>
-</footer><!-- /.post-info --><h2>Ceci est mon premier blog post</h2>
-<p>Et il casse des culs.</p>                </article>
+<p>In <a href="https://dmshd.github.io/category/web-tricks-using-python.html">Web tricks using Python</a>.</p>
+<p>tags: <a href="https://dmshd.github.io/tag/python.html">python</a> <a href="https://dmshd.github.io/tag/web.html">web</a> <a href="https://dmshd.github.io/tag/youtube.html">YouTube</a> <a href="https://dmshd.github.io/tag/transcription.html">Transcription</a> <a href="https://dmshd.github.io/tag/video.html">video</a> <a href="https://dmshd.github.io/tag/subtitles.html">subtitles</a> </p>
+</footer><!-- /.post-info --><h2>Fetching subtitles (even the automated ones!)</h2>
+<p>Here is the code snippet I just made trying out that amazing package :</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">youtube_transcript_api</span> <span class="kn">import</span> <span class="n">YouTubeTranscriptApi</span>
+
+<span class="n">video_id</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is the id of the video (after &quot;watch?v=&quot;)? : &#39;</span><span class="p">)</span>
+<span class="n">transcription</span> <span class="o">=</span> <span class="n">YouTubeTranscriptApi</span><span class="o">.</span><span class="n">get_transcript</span><span class="p">(</span><span class="n">video_id</span><span class="p">)</span>
+<span class="c1">#  print(transcription)</span>
+
+<span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">el</span><span class="p">[</span><span class="s2">&quot;text&quot;</span><span class="p">])</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">You can also add the languages param</span>
+<span class="sd">if you want to make sure the transcripts</span>
+<span class="sd">are retrieved in your desired language</span>
+<span class="sd">(it defaults to english).</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="c1"># YouTubeTranscriptApi.get_transcripts(video_ids, languages=[&#39;de&#39;, &#39;en&#39;])</span>
+</code></pre></div>
+
+<p>https://pypi.org/project/youtube-transcript-api/</p>                </article>
             </aside><!-- /#featured -->
         <section id="extras" class="body">
                 <div class="blogroll">
