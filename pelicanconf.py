@@ -1,6 +1,6 @@
 AUTHOR = 'Daniel Muyshond'
 SITENAME = 'impavi.de'
-SITEURL = 'https://dmshd.github.io/'
+SITEURL = 'http://www.impavi.de'
 
 PATH = 'content'
 
@@ -17,13 +17,11 @@ AUTHOR_FEED_RSS = None
 
 # Blogroll
 LINKS = (('Pelican', 'https://getpelican.com/'),
-         ('Python.org', 'https://www.python.org/'),
-         ('Jinja2', 'https://palletsprojects.com/p/jinja/'),
-         ('You can modify those links in your config file', '#'),)
+         ('Python.org', 'https://www.python.org/'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (('YouTube', 'https://www.youtube.com/c/DanielMuyshond'),
+          ('Instagram', 'https://www.instagram.com/d.mshd_/'),)
 
 DEFAULT_PAGINATION = 7
 
