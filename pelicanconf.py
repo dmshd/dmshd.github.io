@@ -1,6 +1,6 @@
 AUTHOR = 'Daniel Muyshond'
 SITENAME = 'impavi.de'
-SITEURL = 'http://www.impavi.de'
+SITEURL = 'http://dmshd.github.io/'
 
 PATH = 'content'
 
