@@ -24,6 +24,7 @@ SOCIAL = (('YouTube', 'https://www.youtube.com/c/DanielMuyshond'),
           ('Instagram', 'https://www.instagram.com/d.mshd_/'),)
 
 DEFAULT_PAGINATION = 7
+THEME = 'themes/mycurrentidea'
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
