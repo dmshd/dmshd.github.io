@@ -1,6 +1,6 @@
 AUTHOR = 'Daniel Muyshond'
 SITENAME = 'impavi.de'
-SITEURL = 'https://www.impavid.de'
+SITEURL = 'http://localhost:8181/'
 
 PATH = 'content'
 

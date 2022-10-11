@@ -1,6 +1,6 @@
 Title: How to Fetch YouTube subs using Python and youtube-transcript-api (pip pkg)
 Date: 2022-06-09
-Category: Web tricks using Python
+Category: Python web tricks
 Tags: python, web, YouTube, Transcription, video, subtitles
 Author: Daniel Muyshond
 Summary: It is a small test of that python package that allows to fetch YouTube subtitles, even if they are automated, which is pretty cool.
