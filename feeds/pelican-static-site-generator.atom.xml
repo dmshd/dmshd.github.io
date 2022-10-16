@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>impavi.de - Pelican Static Site Generator</title><link href="https://www.impavi.de/" rel="alternate"></link><link href="https://www.impavi.de/feeds/pelican-static-site-generator.atom.xml" rel="self"></link><id>https://www.impavi.de/</id><updated>2022-10-11T00:00:00+02:00</updated><entry><title>How to have a devlopment server locally for Pelican</title><link href="https://www.impavi.de/pelican-devlopment-server.html" rel="alternate"></link><published>2022-10-11T00:00:00+02:00</published><updated>2022-10-11T00:00:00+02:00</updated><author><name>Daniel Muyshond</name></author><id>tag:www.impavi.de,2022-10-11:/pelican-devlopment-server.html</id><summary type="html">&lt;p&gt;How to have a devlopment server running locally with Pelican&lt;/p&gt;</summary><content type="html">&lt;h2&gt;The method using make devserver mentionned on the older Pelican documentation&lt;/h2&gt;
+&lt;p&gt;Simply run the following command at the root of your Pelican project, where the &lt;code&gt;Makefile&lt;/code&gt; file is located:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;make devserver
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This will start a development server on port 8000. You can access it by going to &lt;a href="http://localhost:8000"&gt;http://localhost:8000&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can also specify a different port by running the following command:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;make devserver PORT=8080
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;It can be useful if you already have a server running on port 8000.&lt;/p&gt;
+&lt;h2&gt;The method using pelican --listen --autoreload&lt;/h2&gt;
+&lt;p&gt;This method seems more recent and is mentionned on the Pelican documention.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;pelican&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;listen&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;autoreload&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;port&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;8181&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Note : &lt;code&gt;--port&lt;/code&gt; is optional, the default port is 8000.&lt;/p&gt;
+&lt;h3&gt;What if local server does not serve static files like CSS?&lt;/h3&gt;
+&lt;p&gt;You might have a problem with the static files like CSS not being served by the local server. This is probably because the &lt;code&gt;pelicanconf.py&lt;/code&gt; is configured with the same &lt;code&gt;SITEURL&lt;/code&gt; as the production settings set in &lt;code&gt;publishconf.py&lt;/code&gt;. You can fix this by changing the &lt;code&gt;SITEURL&lt;/code&gt; in the &lt;code&gt;pelicanconf.py&lt;/code&gt; file to &lt;code&gt;http://localhost:8000&lt;/code&gt; or &lt;code&gt;http://localhost:8181&lt;/code&gt; depending on the port you are using.&lt;/p&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Beginning with Pelican can be a bit tricky. I hope this article will help you to get started with Pelican.&lt;/p&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://docs.getpelican.com/en/stable/"&gt;Pelican documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.getpelican.com/en/stable/quickstart.html#developing-your-site"&gt;Pelican documentation - Quickstart&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.getpelican.com/en/stable/publish.html#site-generation"&gt;Pelican documentation - Site generation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Pelican Static Site Generator"></category><category term="pelican"></category><category term="python"></category><category term="it problems encountered"></category><category term="development"></category></entry><entry><title>How to upgrade Pelican to the latest version</title><link href="https://www.impavi.de/how-to-upgrade-pelican-to-the-latest-version-en.html" rel="alternate"></link><published>2022-10-09T00:00:00+02:00</published><updated>2022-10-09T00:00:00+02:00</updated><author><name>Daniel Muyshond</name></author><id>tag:www.impavi.de,2022-10-09:/how-to-upgrade-pelican-to-the-latest-version-en.html</id><summary type="html">&lt;p&gt;You did not open your pelican repository since a long time and maybe it's time to upgrade.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Upgrading pelican ssg python package&lt;/h2&gt;
+&lt;p&gt;Here is the command to get &lt;a href="https://docs.getpelican.com/en/latest"&gt;the latest pelican version&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;python -m pip install --upgrade pelican
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;source : https://docs.getpelican.com/en/latest/install.html#upgrading&lt;/p&gt;</content><category term="Pelican Static Site Generator"></category><category term="python"></category><category term="ssg"></category><category term="pelican"></category><category term="upgrade"></category><category term="package"></category><category term="pip"></category></entry></feed>

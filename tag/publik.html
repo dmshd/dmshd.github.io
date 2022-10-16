@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="generator" content="Pelican" />
+        <title>impavi.de - publik</title>
+        <link rel="stylesheet" href="https://www.impavi.de/theme/css/main.css" />
+        <link href="https://www.impavi.de/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="impavi.de Atom Feed" />
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="https://www.impavi.de/">impavi.de</a></h1>
+                <nav><ul>
+                    <li><a href="https://www.impavi.de/category/articles-en-francais-les-etats-dan-etats-dame-blog.html">Articles en français · Les états « Dan » (états d'âme) (blog)</a></li>
+                    <li><a href="https://www.impavi.de/category/articles-en-francais-publik-le-connecteur-citoyen.html">Articles en français · Publik · Le connecteur citoyen</a></li>
+                    <li><a href="https://www.impavi.de/category/general-development-tricks.html">General development tricks</a></li>
+                    <li><a href="https://www.impavi.de/category/pelican-static-site-generator.html">Pelican Static Site Generator</a></li>
+                    <li><a href="https://www.impavi.de/category/python-tricks-automation-and-web-scraping.html">Python tricks, automation and web scraping</a></li>
+                    <li><a href="https://www.impavi.de/category/uxui.html">UX/UI</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="https://www.impavi.de/comment-afficher-la-date-et-l-heure-de-facon-optimale-dans-publik.html">Comment afficher la date et l'heure de façon optimale dans Publik ?</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2022-10-16T15:22:00+02:00">
+                Published: Sun 16 October 2022
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.impavi.de/author/daniel-muyshond.html">Daniel Muyshond</a>
+        </address>
+<p>In <a href="https://www.impavi.de/category/articles-en-francais-publik-le-connecteur-citoyen.html">Articles en français · Publik · Le connecteur citoyen</a>.</p>
+<p>tags: <a href="https://www.impavi.de/tag/ux.html">UX</a> <a href="https://www.impavi.de/tag/ui.html">UI</a> <a href="https://www.impavi.de/tag/publik.html">publik</a> <a href="https://www.impavi.de/tag/administrateur-fonctionnel.html">administrateur fonctionnel</a> <a href="https://www.impavi.de/tag/gabarits-django.html">gabarits django</a> <a href="https://www.impavi.de/tag/experience-utilisateur.html">expérience utilisateur</a> </p>
+</footer><!-- /.post-info --><h2>Comment afficher la date et l'heure de façon optimale dans Publik ?</h2>
+<p>Publik utilise le format de date et d'heure suivant : <code>2022-10-16 15:25:00</code>. C'est un format qui est utilisé par les développeurs et qui est facile à trier. Cependant, ce format n'est pas très lisible pour les utilisateurs. Il est donc préférable de l'afficher de façon plus optimale et lisible.</p>
+<h3>Afficher la date et l'heure dans un gabarit Django</h3>
+<p>Dans un gabarit Django, il est possible d'afficher la date et l'heure de façon plus optimale et lisible. Par exemple, pour afficher la date et l'heure de la variable <code>form_var_date</code> issue d'un formulaire, il suffit d'utiliser le filtre <code>|date</code> de Django :</p>
+<div class="highlight"><pre><span></span><code><span class="x">Votre rendez vous à été confirmé le `</span><span class="cp">{{</span> <span class="nv">form_workflow_data_reservation_response_datetime</span><span class="o">|</span><span class="nf">date</span><span class="s2">:&quot;l d F&quot;</span><span class="cp">}}</span><span class="x">` à `</span><span class="cp">{{</span> <span class="nv">form_workflow_data_reservation_response_datetime</span><span class="o">|</span><span class="nf">date</span><span class="s2">:&quot;G\hH&quot;</span><span class="cp">}}</span><span class="x">`.</span>
+</code></pre></div>
+
+<h3>Signification des valeurs de formatage passées au filtre <code>|date</code></h3>
+<p>Le filtre <code>|date:"l d F"</code> appliqué à une variable permet d'afficher la date en français (exemple : dimanche 16 octobre).</p>
+<p>Le filtre <code>|date:"G\hH"</code> permet d'afficher l'heure à la française (exemple : 13h30).</p>
+<p>Vous avez un profil de technicien et vous souhaitez connaître le pourquoi du comment ? Retrouvez le détail du filtre <code>|date</code> dans la documentation de Django, dans les références de cet article (en bas de la page, après la conclusion).</p>
+<h2>Conclusion</h2>
+<p>Appliquer cette astuce <a href="https://doc-publik.entrouvert.com/admin-fonctionnel/fabrique-de-workflows/les-actions-de-workflow/elements_envoyer-un-email/#envoyer-un-courriel">dans un mail</a>, <a href="https://doc-publik.entrouvert.com/admin-fonctionnel/fabrique-de-workflows/les-actions-de-workflow/elements_afficher-un-message/#alerte">une action de workflow « Alerte »</a> ou un une <a href="https://doc-publik.entrouvert.com/admin-fonctionnel/fabrique-de-workflows/les-actions-de-workflow/elements_enregistrer-dans-le-journal/#enregistrer-un-message-dans-lhistorique">action de workflow « Message dans l'historique »</a> permet de rendre l'expérience utilisateur plus agréable pour les utilisateurs, que ce soit les administrateurs ou les citoyens.</p>
+<p>Une expérience utilisateur soignée et optimale est un facteur clé de succès pour tout projet de numérisation de processus.</p>
+<h3>Références</h3>
+<ul>
+<li><a href="https://publik.entrouvert.com/">Publik, le connecteur citoyen</a></li>
+<li><a href="https://doc-publik.entrouvert.com/admin-fonctionnel/parametrage-avance/utiliser-les-filtres/#utiliser-les-filtres">Documentation de Publik · Utiliser les filtres</a></li>
+<li><a href="https://doc-publik.entrouvert.com/admin-fonctionnel/parametrage-avance/utiliser-les-filtres/#filtres-sur-les-dates">Documentation de Publik · Filtre sur les dates</a></li>
+<li><a href="https://docs.djangoproject.com/en/4.1/ref/templates/builtins/#date">Documentation Django : Filtre date</a></li>
+</ul><p>There are <a href="https://www.impavi.de/comment-afficher-la-date-et-l-heure-de-facon-optimale-dans-publik.html#disqus_thread">comments</a>.</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://www.impavi.de/comment-personnaliser-le-menu-du-backoffice-dans-publik.html" rel="bookmark"
+                           title="Permalink to Articles en français · Comment personnaliser le menu du backoffice dans Publik ?">Articles en français · Comment personnaliser le menu du backoffice dans Publik ?</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2022-10-16T11:27:00+02:00">
+                Published: Sun 16 October 2022
+        </abbr>
+		<br />
+        <abbr class="modified" title="2022-10-16T11:27:00+02:00">
+                Updated: Sun 16 October 2022
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://www.impavi.de/author/daniel-muyshond.html">Daniel Muyshond</a>
+        </address>
+<p>In <a href="https://www.impavi.de/category/articles-en-francais-publik-le-connecteur-citoyen.html">Articles en français · Publik · Le connecteur citoyen</a>.</p>
+<p>tags: <a href="https://www.impavi.de/tag/ux.html">UX</a> <a href="https://www.impavi.de/tag/ui.html">UI</a> <a href="https://www.impavi.de/tag/publik.html">publik</a> <a href="https://www.impavi.de/tag/administrateur-fonctionnel.html">administrateur fonctionnel</a> <a href="https://www.impavi.de/tag/menu.html">menu</a> <a href="https://www.impavi.de/tag/backoffice.html">backoffice</a> </p>
+</footer><!-- /.post-info -->                <p>Comment personnaliser le menu du backoffice dans Publik ?</p>
+                <a class="readmore" href="https://www.impavi.de/comment-personnaliser-le-menu-du-backoffice-dans-publik.html">read more</a>
+<p>There are <a href="https://www.impavi.de/comment-personnaliser-le-menu-du-backoffice-dans-publik.html#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+                </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h3>Links</h3>
+                        <ul>
+                            <li><a href="http://localhost:8181/archives.html">Archives (all articles)</a></li>
+                            <li><a href="https://getpelican.com/">Pelican</a></li>
+                            <li><a href="https://www.python.org/">Python.org</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h3>Social</h3>
+                        <ul>
+                            <li><a href="https://www.impavi.de/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                            <li><a href="https://www.linkedin.com/in/danielmuyshond/">LinkedIn</a></li>
+                            <li><a href="https://twitter.com/_dmshd">Twitter</a></li>
+                            <li><a href="https://www.youtube.com/c/DanielMuyshond">YouTube</a></li>
+                            <li><a href="https://www.instagram.com/d.mshd_/">Instagram</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="https://getpelican.com/">Pelican</a>, which takes great advantage of <a href="https://www.python.org/">Python</a>.
+                </address><!-- /#about -->
+
+<p>The theme is custom-made with parts of  <a href="https://www.swyx.io/css-100-bytes">100 Bytes of CSS to look great everywhere</a>, from <a href="https://www.swyx.io/about">swyx</a>, and <a href="https://github.com/getpelican/pelican/tree/master/pelican/themes/notmyidea/templates">templates of 'notmyidea' Pelican default theme</a>, thanks!</p>        </footer><!-- /#contentinfo -->
+
+    <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-139715834-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+<script type="text/javascript">
+    var disqus_shortname = 'https-www-impavi-de';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</body>
+</html>
