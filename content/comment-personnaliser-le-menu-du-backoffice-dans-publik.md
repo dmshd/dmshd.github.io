@@ -46,9 +46,6 @@ J'ai choisi de regrouper les éléments différemment et en trois catégories :
 
 La détail apporté à la définition des rôles et visibilité de page permettre une granularité dans ce qui sera affiché à chaque profil d'agent·e.
 
-![Menu Publik](/images/personnaliser-menu-publik.png)
-
-
 ### Conclusion
 
 L'optimisation de l'expérience utilisateur est un enjeu majeur pour les administrations. Que ce soit pour les agents ou les usagers, il est important de faciliter l'accès aux fonctionnalités les plus utilisées.
