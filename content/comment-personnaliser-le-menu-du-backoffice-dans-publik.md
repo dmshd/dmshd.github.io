@@ -50,7 +50,7 @@ La détail apporté à la définition des rôles et visibilité de page permettr
 
 L'optimisation de l'expérience utilisateur est un enjeu majeur pour les administrations. Que ce soit pour les agents ou les usagers, il est important de faciliter l'accès aux fonctionnalités les plus utilisées.
 
-Cela représentera un gain de temps pour les agents avec pour finalité, une meilleure expérience utilisateur ces derniers et les usagers des services 'une administration.
+Cela représentera un gain de temps pour les agents avec pour finalité, une meilleure expérience utilisateur de ces derniers, ainsi que par ruissellement, pour les usagers finaux des services d'une administration.
 
 
 ### Références
