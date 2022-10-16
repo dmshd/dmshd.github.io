@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="generator" content="Pelican" />
+        <title>impavi.de - pdf text extraction</title>
+        <link rel="stylesheet" href="http://localhost:8181/theme/css/main.css" />
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="http://localhost:8181/">impavi.de</a></h1>
+                <nav><ul>
+                    <li><a href="http://localhost:8181/category/articles-en-francais-les-etats-dan-etats-dame-blog.html">Articles en français · Les états « Dan » (états d'âme) (blog)</a></li>
+                    <li><a href="http://localhost:8181/category/articles-en-francais-publik-le-connecteur-citoyen.html">Articles en français · Publik · Le connecteur citoyen</a></li>
+                    <li><a href="http://localhost:8181/category/general-development-tricks.html">General development tricks</a></li>
+                    <li><a href="http://localhost:8181/category/pelican-static-site-generator.html">Pelican Static Site Generator</a></li>
+                    <li><a href="http://localhost:8181/category/python-tricks-automation-and-web-scraping.html">Python tricks, automation and web scraping</a></li>
+                    <li><a href="http://localhost:8181/category/uxui.html">UX/UI</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="http://localhost:8181/how-to-prind-out-text-from-a-generated-pdf-file-in-python-with-pdfplumber-en.html">How to prind out text from a generated pdf file in Python with pdfplumber</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2022-10-16T14:20:00+02:00">
+                Published: dim 16 octobre 2022
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="http://localhost:8181/author/daniel-muyshond.html">Daniel Muyshond</a>
+        </address>
+<p>In <a href="http://localhost:8181/category/python-tricks-automation-and-web-scraping.html">Python tricks, automation and web scraping</a>.</p>
+<p>tags: <a href="http://localhost:8181/tag/pdfplumber.html">pdfplumber</a> <a href="http://localhost:8181/tag/pdf.html">pdf</a> <a href="http://localhost:8181/tag/python.html">python</a> <a href="http://localhost:8181/tag/automation.html">automation</a> <a href="http://localhost:8181/tag/text-extraction.html">text extraction</a> <a href="http://localhost:8181/tag/pdf-text-extraction.html">pdf text extraction</a> <a href="http://localhost:8181/tag/pdf-text-extraction-python.html">pdf text extraction python</a> <a href="http://localhost:8181/tag/pdf-text-extraction-python-pdfplumber.html">pdf text extraction python pdfplumber</a> </p>
+</footer><!-- /.post-info --><h2>How to print out text from a generated pdf file in Python with pdfplumber</h2>
+<h3>The context of me need to extract text from a pdf</h3>
+<p>I would like to extract the data from my account statements in PDF.</p>
+<p>After searching, it seems that <a href="https://github.com/jsvine/pdfplumber">pdfplumber</a> is strong enough to extract the text from generated pdf.</p>
+<p>Here's a quick try with <a href="https://static.societegenerale.fr/pri/PRI/Repertoire_par_type_de_contenus/Fichier_a_telecharger/nouveau-releve-compte.pdf">a sample pdf file I found on the web</a>.</p>
+<h3>The code I just generated to extract text from a pdf</h3>
+<p>Here is a small code snippet I just made to print out text from a generated pdf file in Python with pdfplumber :</p>
+<div class="highlight"><pre><span></span><code><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Takes a pdf file prints out the text of it</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">pdfplumber</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">argparse</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;-f&#39;</span><span class="p">,</span> <span class="s1">&#39;--file&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;pdf file to extract text from&#39;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+    <span class="n">pdf_file</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">file</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">pdf_file</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;File does not exist&#39;</span><span class="p">)</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">pdfplumber</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">pdf_file</span><span class="p">)</span> <span class="k">as</span> <span class="n">pdf</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">page</span> <span class="ow">in</span> <span class="n">pdf</span><span class="o">.</span><span class="n">pages</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">page</span><span class="o">.</span><span class="n">extract_text</span><span class="p">())</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</code></pre></div>
+
+<h2>Conclusion</h2>
+<p>I now have all the text printing in the terminal.</p>
+<p>All that would be left to do is to identify the lines corresponding to the transactions (at first sight starting with a date and containing numbers, perhaps confirming with <code>startswith()</code> or a neat regex and you have the beginnings of a trick to classify your transactions.</p>                </article>
+            </aside><!-- /#featured -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h3>Links</h3>
+                        <ul>
+                            <li><a href="http://localhost:8181/archives.html">Archives (all articles)</a></li>
+                            <li><a href="https://getpelican.com/">Pelican</a></li>
+                            <li><a href="https://www.python.org/">Python.org</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h3>Social</h3>
+                        <ul>
+
+                            <li><a href="https://www.linkedin.com/in/danielmuyshond/">LinkedIn</a></li>
+                            <li><a href="https://twitter.com/_dmshd">Twitter</a></li>
+                            <li><a href="https://www.youtube.com/c/DanielMuyshond">YouTube</a></li>
+                            <li><a href="https://www.instagram.com/d.mshd_/">Instagram</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="https://getpelican.com/">Pelican</a>, which takes great advantage of <a href="https://www.python.org/">Python</a>.
+                </address><!-- /#about -->
+
+<p>The theme is custom-made with parts of  <a href="https://www.swyx.io/css-100-bytes">100 Bytes of CSS to look great everywhere</a>, from <a href="https://www.swyx.io/about">swyx</a>, and <a href="https://github.com/getpelican/pelican/tree/master/pelican/themes/notmyidea/templates">templates of 'notmyidea' Pelican default theme</a>, thanks!</p>        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

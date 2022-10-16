@@ -54,5 +54,5 @@ Cela représentera un gain de temps pour les agents avec pour finalité, une mei
 
 
 ### Références
-[Modifier le contenu des portails (documentation officielle Publik)](https://doc-publik.entrouvert.com/admin-fonctionnel/modifier-le-contenu-des-portails/creer-un-menu-personnalise/#creer-un-menu-personnalise)
-[Personnaliser le menu du backoffice dans Publik](https://doc-publik.entrouvert.com/admin-fonctionnel/modifier-le-contenu-des-portails/creer-un-menu-personnalise/#creer-un-menu-personnalise)
+1. [Modifier le contenu des portails (documentation officielle Publik)](https://doc-publik.entrouvert.com/admin-fonctionnel/modifier-le-contenu-des-portails/creer-un-menu-personnalise/#creer-un-menu-personnalise)
+2. [Personnaliser le menu du backoffice dans Publik](https://doc-publik.entrouvert.com/admin-fonctionnel/modifier-le-contenu-des-portails/creer-un-menu-personnalise/#creer-un-menu-personnalise)

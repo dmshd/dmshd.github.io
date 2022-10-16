@@ -16,14 +16,101 @@
                     <li><a href="http://localhost:8181/category/articles-en-francais-publik-le-connecteur-citoyen.html">Articles en français · Publik · Le connecteur citoyen</a></li>
                     <li><a href="http://localhost:8181/category/general-development-tricks.html">General development tricks</a></li>
                     <li><a href="http://localhost:8181/category/pelican-static-site-generator.html">Pelican Static Site Generator</a></li>
-                    <li><a href="http://localhost:8181/category/python-tricks.html">Python tricks</a></li>
+                    <li><a href="http://localhost:8181/category/python-tricks-automation-and-web-scraping.html">Python tricks, automation and web scraping</a></li>
                     <li><a href="http://localhost:8181/category/uxui.html">UX/UI</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="http://localhost:8181/comment-personnaliser-le-menu-du-backoffice-dans-publik.html">Articles en français · Comment personnaliser le menu du backoffice dans Publik ?</a></h1>
+                    <h1 class="entry-title"><a href="http://localhost:8181/how-to-scrap-favicon-from-a-website-using-python-en.html">How to scrap favicon from a website using Python</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2022-10-16T14:26:00+02:00">
+                Published: dim 16 octobre 2022
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="http://localhost:8181/author/daniel-muyshond.html">Daniel Muyshond</a>
+        </address>
+<p>In <a href="http://localhost:8181/category/python-tricks-automation-and-web-scraping.html">Python tricks, automation and web scraping</a>.</p>
+<p>tags: <a href="http://localhost:8181/tag/python.html">python</a> <a href="http://localhost:8181/tag/web.html">web</a> <a href="http://localhost:8181/tag/favicon.html">favicon</a> <a href="http://localhost:8181/tag/scraping.html">scraping</a> </p>
+</footer><!-- /.post-info --><h2>The context of scraping favicons</h2>
+<p>During my work, I often have to initiate graphical themes for our clients and look for their assets (logo, favicon, etc.).
+It doesn's take long time to connect to the website and download the favicon, but it's a bit boring to do it manually.
+If it can be automated, why not?</p>
+<h2>The script to scrap favicons</h2>
+<p>Here is the code snippet I just generated to scrap favicons from websites.
+It takes a url as input and downloads the favicon in the current directory.</p>
+<div class="highlight"><pre><span></span><code><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Scrap favicon asset from a website.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">urllib.request</span>
+<span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="kn">import</span> <span class="n">urlparse</span>
+
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="k">def</span> <span class="nf">scrap_favicon</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Scrap favicon from a website.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Get the domain name</span>
+    <span class="n">domain_name</span> <span class="o">=</span> <span class="n">urlparse</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="o">.</span><span class="n">netloc</span>
+    <span class="c1"># Get the favicon url</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+    <span class="n">favicon_url</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;link&#39;</span><span class="p">,</span> <span class="n">rel</span><span class="o">=</span><span class="s1">&#39;shortcut icon&#39;</span><span class="p">)[</span><span class="s1">&#39;href&#39;</span><span class="p">]</span>
+    <span class="c1"># Download the favicon</span>
+    <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">favicon_url</span><span class="p">,</span> <span class="s1">&#39;favicon&#39;</span> <span class="o">+</span> <span class="s1">&#39;.ico&#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Usage: python3 scrap_favicon.py &lt;url&gt;&#39;</span><span class="p">)</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">scrap_favicon</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</code></pre></div>
+
+<h2>Conclusion</h2>
+<p>I now have a script that scrap favicons from websites and so you are welcome to use or adjust it following your needs too.</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://localhost:8181/how-to-prind-out-text-from-a-generated-pdf-file-in-python-with-pdfplumber-en.html" rel="bookmark"
+                           title="Permalink to How to prind out text from a generated pdf file in Python with pdfplumber">How to prind out text from a generated pdf file in Python with pdfplumber</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2022-10-16T14:20:00+02:00">
+                Published: dim 16 octobre 2022
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="http://localhost:8181/author/daniel-muyshond.html">Daniel Muyshond</a>
+        </address>
+<p>In <a href="http://localhost:8181/category/python-tricks-automation-and-web-scraping.html">Python tricks, automation and web scraping</a>.</p>
+<p>tags: <a href="http://localhost:8181/tag/pdfplumber.html">pdfplumber</a> <a href="http://localhost:8181/tag/pdf.html">pdf</a> <a href="http://localhost:8181/tag/python.html">python</a> <a href="http://localhost:8181/tag/automation.html">automation</a> <a href="http://localhost:8181/tag/text-extraction.html">text extraction</a> <a href="http://localhost:8181/tag/pdf-text-extraction.html">pdf text extraction</a> <a href="http://localhost:8181/tag/pdf-text-extraction-python.html">pdf text extraction python</a> <a href="http://localhost:8181/tag/pdf-text-extraction-python-pdfplumber.html">pdf text extraction python pdfplumber</a> </p>
+</footer><!-- /.post-info -->                <p>How to print out text from a generated pdf file in Python with pdfplumber</p>
+                <a class="readmore" href="http://localhost:8181/how-to-prind-out-text-from-a-generated-pdf-file-in-python-with-pdfplumber-en.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://localhost:8181/comment-personnaliser-le-menu-du-backoffice-dans-publik.html" rel="bookmark"
+                           title="Permalink to Articles en français · Comment personnaliser le menu du backoffice dans Publik ?">Articles en français · Comment personnaliser le menu du backoffice dans Publik ?</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2022-10-16T11:27:00+02:00">
                 Published: dim 16 octobre 2022
@@ -38,40 +125,10 @@
         </address>
 <p>In <a href="http://localhost:8181/category/articles-en-francais-publik-le-connecteur-citoyen.html">Articles en français · Publik · Le connecteur citoyen</a>.</p>
 <p>tags: <a href="http://localhost:8181/tag/ux.html">UX</a> <a href="http://localhost:8181/tag/ui.html">UI</a> <a href="http://localhost:8181/tag/publik.html">publik</a> <a href="http://localhost:8181/tag/administrateur-fonctionnel.html">administrateur fonctionnel</a> <a href="http://localhost:8181/tag/menu.html">menu</a> <a href="http://localhost:8181/tag/backoffice.html">backoffice</a> </p>
-</footer><!-- /.post-info --><h2>Comment personnaliser le menu du backoffice dans Publik ?</h2>
-<p>Le menu standard peut être optimisé en fonction des besoins de l'administration. Il est possible de personnaliser le menu du backoffice dans Publik.
-Cela permettra de simplifier l'accès aux fonctionnalités les plus utilisées par les agents en fonction de leur(s) rôle(s).</p>
-<h3>Prérequis</h3>
-<ul>
-<li>Avoir un compte administrateur fonctionnel sur Publik</li>
-<li>Être à même de modifier le contenu des portails, des pages, de définir des rôles et la visibilité des pages et contenu en fonction de ces derniers.</li>
-</ul>
-<h3>Procédure</h3>
-<p>Je ne vais pas réécrire ici ce qui figure dans <a href="https://doc-publik.entrouvert.com/admin-fonctionnel/modifier-le-contenu-des-portails/creer-un-menu-personnalise/#creer-un-menu-personnalise">la documentation de Publik à ce sujet</a> (pas totalement ou sous une forme légèrement différente). Je vous invite à consulter la documentation officielle de Publik pour plus d'informations.</p>
-<p>Sachez simplement qu'il vous faudra créer autant de pages de la portail agent que d'éléments que vous souhaitez voir apparaître dans le menu.</p>
-<p><img alt="Pages d'un portail agent dans Publik" src="/images/personnalisation_menu_publik_apercu_pages_portail_agent.jpg"></p>
-<p>Il vous faudra initier une variable système qui activera cette fonction et avoir veillé à définir soigneusement les pages et leur rôle avant de l'activer, sans quoi vous risquez de vous retrouver avec un menu vide.</p>
-<p><img alt="Définition de la visibilité et inclusion dans les menus" src="/images/personnalisation_menu_publik_apercu_paramètres_pages.jpg">
-<img alt="Variable système pour activer la personnalisation du menu" src="/images/personnalisation_menu_publik_variable_hobo_a_definir.jpg"></p>
-<h3>Ma suggestion en terme d'expérience utilisateur</h3>
-<p>J'ai choisi de regrouper les éléments différemment et en trois catégories :</p>
-<ul>
-<li>Agents (Saisie, Traitement, Finances, Utilisateurs)</li>
-<li>Studio (Rôles, Formulaires, Workflows, Fiches, Modèles de fiche, Agendas, Édition « Portail agent », Édition « portail citoyen », Statistiques)</li>
-<li>Système (Identités, Services web, Paramètres).</li>
-</ul>
-<p>La détail apporté à la définition des rôles et visibilité de page permettre une granularité dans ce qui sera affiché à chaque profil d'agent·e.</p>
-<h3>Conclusion</h3>
-<p>L'optimisation de l'expérience utilisateur est un enjeu majeur pour les administrations. Que ce soit pour les agents ou les usagers, il est important de faciliter l'accès aux fonctionnalités les plus utilisées.</p>
-<p>Cela représentera un gain de temps pour les agents avec pour finalité, une meilleure expérience utilisateur de ces derniers, ainsi que par ruissellement, pour les usagers finaux des services d'une administration.</p>
-<h3>Références</h3>
-<p><a href="https://doc-publik.entrouvert.com/admin-fonctionnel/modifier-le-contenu-des-portails/creer-un-menu-personnalise/#creer-un-menu-personnalise">Modifier le contenu des portails (documentation officielle Publik)</a>
-<a href="https://doc-publik.entrouvert.com/admin-fonctionnel/modifier-le-contenu-des-portails/creer-un-menu-personnalise/#creer-un-menu-personnalise">Personnaliser le menu du backoffice dans Publik</a></p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+</footer><!-- /.post-info -->                <p>Comment personnaliser le menu du backoffice dans Publik ?</p>
+                <a class="readmore" href="http://localhost:8181/comment-personnaliser-le-menu-du-backoffice-dans-publik.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
@@ -160,55 +217,12 @@ Cela permettra de simplifier l'accès aux fonctionnalités les plus utilisées p
                 <a class="readmore" href="http://localhost:8181/how-to-upgrade-pelican-to-the-latest-version-en.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="http://localhost:8181/how-to-fetch-youtube-subs-using-python-and-youtube-transcript-api-pip-pkg-en.html" rel="bookmark"
-                           title="Permalink to How to Fetch YouTube subs using Python and youtube-transcript-api (pip pkg)">How to Fetch YouTube subs using Python and youtube-transcript-api (pip pkg)</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2022-06-09T00:00:00+02:00">
-                Published: jeu 09 juin 2022
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="http://localhost:8181/author/daniel-muyshond.html">Daniel Muyshond</a>
-        </address>
-<p>In <a href="http://localhost:8181/category/python-tricks.html">Python tricks</a>.</p>
-<p>tags: <a href="http://localhost:8181/tag/python.html">python</a> <a href="http://localhost:8181/tag/web.html">web</a> <a href="http://localhost:8181/tag/youtube.html">YouTube</a> <a href="http://localhost:8181/tag/transcription.html">Transcription</a> <a href="http://localhost:8181/tag/video.html">video</a> <a href="http://localhost:8181/tag/subtitles.html">subtitles</a> </p>
-</footer><!-- /.post-info -->                <p>It is a small test of that python package that allows to fetch YouTube subtitles, even if they are automated, which is pretty cool.</p>
-                <a class="readmore" href="http://localhost:8181/how-to-fetch-youtube-subs-using-python-and-youtube-transcript-api-pip-pkg-en.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="http://localhost:8181/mon-premier-blog-post-automatise.html" rel="bookmark"
-                           title="Permalink to Mon premier blog post automatisé">Mon premier blog post automatisé</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2022-05-22T00:00:00+02:00">
-                Published: dim 22 mai 2022
-        </abbr>
-		<br />
-        <abbr class="modified" title="2022-10-16T12:09:00+02:00">
-                Updated: dim 16 octobre 2022
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="http://localhost:8181/author/daniel-muyshond.html">Daniel Muyshond</a>
-        </address>
-<p>In <a href="http://localhost:8181/category/articles-en-francais-les-etats-dan-etats-dame-blog.html">Articles en français · Les états « Dan » (états d'âme) (blog)</a>.</p>
-<p>tags: <a href="http://localhost:8181/tag/personnal-thoughts.html">personnal thoughts</a> <a href="http://localhost:8181/tag/github.html">github</a> <a href="http://localhost:8181/tag/python.html">python</a> <a href="http://localhost:8181/tag/pelican.html">pelican</a> </p>
-</footer><!-- /.post-info -->                <p>J'ai suivi un guide pour configurer l'intégration continue automatique (CD) d'un site web statique généré par Pelican (Python) sur GitHub Pages en utilisant les GitHub Actions.</p>
-                <a class="readmore" href="http://localhost:8181/mon-premier-blog-post-automatise.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
                 </ol><!-- /#posts-list -->
+<p class="paginator">
+    Page 1 / 2
+        <a href="http://localhost:8181/index2.html">&raquo;</a>
+        <a href="http://localhost:8181/index2.html">&#8649;</a>
+</p>
                 </section><!-- /#content -->
         <section id="extras" class="body">
                 <div class="blogroll">
