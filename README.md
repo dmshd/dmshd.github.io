@@ -3,6 +3,6 @@
 My GitHub Pages website is using Pelican and Github-Pages to generate a static website.
 
 
-## TODO
+## TODO (already done)
 
-* [ ] Custom 404 page https://docs.getpelican.com/en/stable/tips.html#id1
+* [*] Custom 404 page https://docs.getpelican.com/en/stable/tips.html#id1
