@@ -3,7 +3,7 @@ html {
 	padding: 3em 1em;
 	margin: auto;
 	line-height: 1.75;
-	font-size: 0.786em;
+	font-size: 0.987em;
   }
 
   h1,h2,h3,h4,h5,h6 {
@@ -42,3 +42,8 @@ a:active {
 }
 
 pre{background-color:  rgb(238, 238, 238); padding: 10px; margin: 10px; overflow: auto;}
+
+code {
+	font-size: 1.2em;
+	color: #a20000;
+}

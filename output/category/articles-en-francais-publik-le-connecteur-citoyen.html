@@ -23,7 +23,51 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="http://localhost:8181/comment-personnaliser-le-menu-du-backoffice-dans-publik.html">Articles en français · Comment personnaliser le menu du backoffice dans Publik ?</a></h1>
+                    <h1 class="entry-title"><a href="http://localhost:8181/comment-afficher-la-date-et-l-heure-de-facon-optimale-dans-publik.html">Comment afficher la date et l'heure de façon optimale dans Publik ?</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2022-10-16T15:22:00+02:00">
+                Published: dim 16 octobre 2022
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="http://localhost:8181/author/daniel-muyshond.html">Daniel Muyshond</a>
+        </address>
+<p>In <a href="http://localhost:8181/category/articles-en-francais-publik-le-connecteur-citoyen.html">Articles en français · Publik · Le connecteur citoyen</a>.</p>
+<p>tags: <a href="http://localhost:8181/tag/ux.html">UX</a> <a href="http://localhost:8181/tag/ui.html">UI</a> <a href="http://localhost:8181/tag/publik.html">publik</a> <a href="http://localhost:8181/tag/administrateur-fonctionnel.html">administrateur fonctionnel</a> <a href="http://localhost:8181/tag/gabarits-django.html">gabarits django</a> <a href="http://localhost:8181/tag/experience-utilisateur.html">expérience utilisateur</a> </p>
+</footer><!-- /.post-info --><h2>Comment afficher la date et l'heure de façon optimale dans Publik ?</h2>
+<p>Publik utilise le format de date et d'heure suivant : <code>2022-10-16 15:25:00</code>. C'est un format qui est utilisé par les développeurs et qui est facile à trier. Cependant, ce format n'est pas très lisible pour les utilisateurs. Il est donc préférable de l'afficher de façon plus optimale et lisible.</p>
+<h3>Afficher la date et l'heure dans un gabarit Django</h3>
+<p>Dans un gabarit Django, il est possible d'afficher la date et l'heure de façon plus optimale et lisible. Par exemple, pour afficher la date et l'heure de la variable <code>form_var_date</code> issue d'un formulaire, il suffit d'utiliser le filtre <code>|date</code> de Django :</p>
+<div class="highlight"><pre><span></span><code><span class="x">Votre rendez vous à été confirmé le `</span><span class="cp">{{</span> <span class="nv">form_workflow_data_reservation_response_datetime</span><span class="o">|</span><span class="nf">date</span><span class="s2">:&quot;l d F&quot;</span><span class="cp">}}</span><span class="x">` à `</span><span class="cp">{{</span> <span class="nv">form_workflow_data_reservation_response_datetime</span><span class="o">|</span><span class="nf">date</span><span class="s2">:&quot;G\hH&quot;</span><span class="cp">}}</span><span class="x">`.</span>
+</code></pre></div>
+
+<h3>Signification des valeurs de formatage passées au filtre <code>|date</code></h3>
+<p>Le filtre <code>|date:"l d F"</code> appliqué à une variable permet d'afficher la date en français (exemple : dimanche 16 octobre).</p>
+<p>Le filtre <code>|date:"G\hH"</code> permet d'afficher l'heure à la française (exemple : 13h30).</p>
+<p>Vous avez un profil de technicien et vous souhaitez connaître le pourquoi du comment ? Retrouvez le détail du filtre <code>|date</code> dans la documentation de Django, dans les références de cet article (en bas de la page, après la conclusion).</p>
+<h2>Conclusion</h2>
+<p>Appliquer cette astuce <a href="https://doc-publik.entrouvert.com/admin-fonctionnel/fabrique-de-workflows/les-actions-de-workflow/elements_envoyer-un-email/#envoyer-un-courriel">dans un mail</a>, <a href="https://doc-publik.entrouvert.com/admin-fonctionnel/fabrique-de-workflows/les-actions-de-workflow/elements_afficher-un-message/#alerte">une action de workflow « Alerte »</a> ou un une <a href="https://doc-publik.entrouvert.com/admin-fonctionnel/fabrique-de-workflows/les-actions-de-workflow/elements_enregistrer-dans-le-journal/#enregistrer-un-message-dans-lhistorique">action de workflow « Message dans l'historique »</a> permet de rendre l'expérience utilisateur plus agréable pour les utilisateurs, que ce soit les administrateurs ou les citoyens.</p>
+<p>Une expérience utilisateur soignée et optimale est un facteur clé de succès pour tout projet de numérisation de processus.</p>
+<h3>Références</h3>
+<ul>
+<li><a href="https://publik.entrouvert.com/">Publik, le connecteur citoyen</a></li>
+<li><a href="https://doc-publik.entrouvert.com/admin-fonctionnel/parametrage-avance/utiliser-les-filtres/#utiliser-les-filtres">Documentation de Publik · Utiliser les filtres</a></li>
+<li><a href="https://doc-publik.entrouvert.com/admin-fonctionnel/parametrage-avance/utiliser-les-filtres/#filtres-sur-les-dates">Documentation de Publik · Filtre sur les dates</a></li>
+<li><a href="https://docs.djangoproject.com/en/4.1/ref/templates/builtins/#date">Documentation Django : Filtre date</a></li>
+</ul>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://localhost:8181/comment-personnaliser-le-menu-du-backoffice-dans-publik.html" rel="bookmark"
+                           title="Permalink to Articles en français · Comment personnaliser le menu du backoffice dans Publik ?">Articles en français · Comment personnaliser le menu du backoffice dans Publik ?</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2022-10-16T11:27:00+02:00">
                 Published: dim 16 octobre 2022
@@ -38,38 +82,12 @@
         </address>
 <p>In <a href="http://localhost:8181/category/articles-en-francais-publik-le-connecteur-citoyen.html">Articles en français · Publik · Le connecteur citoyen</a>.</p>
 <p>tags: <a href="http://localhost:8181/tag/ux.html">UX</a> <a href="http://localhost:8181/tag/ui.html">UI</a> <a href="http://localhost:8181/tag/publik.html">publik</a> <a href="http://localhost:8181/tag/administrateur-fonctionnel.html">administrateur fonctionnel</a> <a href="http://localhost:8181/tag/menu.html">menu</a> <a href="http://localhost:8181/tag/backoffice.html">backoffice</a> </p>
-</footer><!-- /.post-info --><h2>Comment personnaliser le menu du backoffice dans Publik ?</h2>
-<p>Le menu standard peut être optimisé en fonction des besoins de l'administration. Il est possible de personnaliser le menu du backoffice dans Publik.
-Cela permettra de simplifier l'accès aux fonctionnalités les plus utilisées par les agents en fonction de leur(s) rôle(s).</p>
-<h3>Prérequis</h3>
-<ul>
-<li>Avoir un compte administrateur fonctionnel sur Publik</li>
-<li>Être à même de modifier le contenu des portails, des pages, de définir des rôles et la visibilité des pages et contenu en fonction de ces derniers.</li>
-</ul>
-<h3>Procédure</h3>
-<p>Je ne vais pas réécrire ici ce qui figure dans <a href="https://doc-publik.entrouvert.com/admin-fonctionnel/modifier-le-contenu-des-portails/creer-un-menu-personnalise/#creer-un-menu-personnalise">la documentation de Publik à ce sujet</a> (pas totalement ou sous une forme légèrement différente). Je vous invite à consulter la documentation officielle de Publik pour plus d'informations.</p>
-<p>Sachez simplement qu'il vous faudra créer autant de pages de la portail agent que d'éléments que vous souhaitez voir apparaître dans le menu.</p>
-<p><img alt="Pages d'un portail agent dans Publik" src="/images/personnalisation_menu_publik_apercu_pages_portail_agent.jpg"></p>
-<p>Il vous faudra initier une variable système qui activera cette fonction et avoir veillé à définir soigneusement les pages et leur rôle avant de l'activer, sans quoi vous risquez de vous retrouver avec un menu vide.</p>
-<p><img alt="Définition de la visibilité et inclusion dans les menus" src="/images/personnalisation_menu_publik_apercu_paramètres_pages.jpg">
-<img alt="Variable système pour activer la personnalisation du menu" src="/images/personnalisation_menu_publik_variable_hobo_a_definir.jpg"></p>
-<h3>Ma suggestion en terme d'expérience utilisateur</h3>
-<p>J'ai choisi de regrouper les éléments différemment et en trois catégories :</p>
-<ul>
-<li>Agents (Saisie, Traitement, Finances, Utilisateurs)</li>
-<li>Studio (Rôles, Formulaires, Workflows, Fiches, Modèles de fiche, Agendas, Édition « Portail agent », Édition « portail citoyen », Statistiques)</li>
-<li>Système (Identités, Services web, Paramètres).</li>
-</ul>
-<p>La détail apporté à la définition des rôles et visibilité de page permettre une granularité dans ce qui sera affiché à chaque profil d'agent·e.</p>
-<h3>Conclusion</h3>
-<p>L'optimisation de l'expérience utilisateur est un enjeu majeur pour les administrations. Que ce soit pour les agents ou les usagers, il est important de faciliter l'accès aux fonctionnalités les plus utilisées.</p>
-<p>Cela représentera un gain de temps pour les agents avec pour finalité, une meilleure expérience utilisateur de ces derniers, ainsi que par ruissellement, pour les usagers finaux des services d'une administration.</p>
-<h3>Références</h3>
-<ol>
-<li><a href="https://doc-publik.entrouvert.com/admin-fonctionnel/modifier-le-contenu-des-portails/creer-un-menu-personnalise/#creer-un-menu-personnalise">Modifier le contenu des portails (documentation officielle Publik)</a></li>
-<li><a href="https://doc-publik.entrouvert.com/admin-fonctionnel/modifier-le-contenu-des-portails/creer-un-menu-personnalise/#creer-un-menu-personnalise">Personnaliser le menu du backoffice dans Publik</a></li>
-</ol>                </article>
-            </aside><!-- /#featured -->
+</footer><!-- /.post-info -->                <p>Comment personnaliser le menu du backoffice dans Publik ?</p>
+                <a class="readmore" href="http://localhost:8181/comment-personnaliser-le-menu-du-backoffice-dans-publik.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+                </section><!-- /#content -->
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h3>Links</h3>
