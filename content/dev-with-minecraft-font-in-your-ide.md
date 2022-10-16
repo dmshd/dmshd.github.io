@@ -4,6 +4,7 @@ Category: General development tricks
 Tags: python, IDE, Minecraft, font, code, programming
 Author: Daniel Muyshond
 Summary: You can use the Minecraft font in your IDE, it's pretty cool.
+Lang: en
 
 ## Minecraft font in your IDE
 

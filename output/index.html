@@ -12,18 +12,75 @@
         <header id="banner" class="body">
                 <h1><a href="http://localhost:8181/">impavi.de</a></h1>
                 <nav><ul>
-                    <li><a href="http://localhost:8181/category/etats-dan-etats-dame.html">États Dan (États d'âme)</a></li>
+                    <li><a href="http://localhost:8181/category/articles-en-francais-les-etats-dan-etats-dame-blog.html">Articles en français · Les états « Dan » (états d'âme) (blog)</a></li>
+                    <li><a href="http://localhost:8181/category/articles-en-francais-publik-le-connecteur-citoyen.html">Articles en français · Publik · Le connecteur citoyen</a></li>
                     <li><a href="http://localhost:8181/category/general-development-tricks.html">General development tricks</a></li>
-                    <li><a href="http://localhost:8181/category/pelican.html">Pelican</a></li>
                     <li><a href="http://localhost:8181/category/pelican-static-site-generator.html">Pelican Static Site Generator</a></li>
-                    <li><a href="http://localhost:8181/category/python-web-tricks.html">Python web tricks</a></li>
+                    <li><a href="http://localhost:8181/category/python-tricks.html">Python tricks</a></li>
                     <li><a href="http://localhost:8181/category/uxui.html">UX/UI</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="http://localhost:8181/how-i-improved-my-understanding-time-of-a-clients-problems-in-jira.html">How I improved my understanding time of a client's problems in Jira</a></h1>
+                    <h1 class="entry-title"><a href="http://localhost:8181/comment-personnaliser-le-menu-du-backoffice-dans-publik.html">Articles en français · Comment personnaliser le menu du backoffice dans Publik ?</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2022-10-16T11:27:00+02:00">
+                Published: dim 16 octobre 2022
+        </abbr>
+		<br />
+        <abbr class="modified" title="2022-10-16T11:27:00+02:00">
+                Updated: dim 16 octobre 2022
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="http://localhost:8181/author/daniel-muyshond.html">Daniel Muyshond</a>
+        </address>
+<p>In <a href="http://localhost:8181/category/articles-en-francais-publik-le-connecteur-citoyen.html">Articles en français · Publik · Le connecteur citoyen</a>.</p>
+<p>tags: <a href="http://localhost:8181/tag/ux.html">UX</a> <a href="http://localhost:8181/tag/ui.html">UI</a> <a href="http://localhost:8181/tag/publik.html">publik</a> <a href="http://localhost:8181/tag/administrateur-fonctionnel.html">administrateur fonctionnel</a> <a href="http://localhost:8181/tag/menu.html">menu</a> <a href="http://localhost:8181/tag/backoffice.html">backoffice</a> </p>
+</footer><!-- /.post-info --><h2>Comment personnaliser le menu du backoffice dans Publik ?</h2>
+<p>Le menu standard peut être optimisé en fonction des besoins de l'administration. Il est possible de personnaliser le menu du backoffice dans Publik.
+Cela permettra de simplifier l'accès aux fonctionnalités les plus utilisées par les agents en fonction de leur(s) rôle(s).</p>
+<h3>Prérequis</h3>
+<ul>
+<li>Avoir un compte administrateur fonctionnel sur Publik</li>
+<li>Être à même de modifier le contenu des portails, des pages, de définir des rôles et la visibilité des pages et contenu en fonction de ces derniers.</li>
+</ul>
+<h3>Procédure</h3>
+<p>Je ne vais pas réécrire ici ce qui figure dans <a href="https://doc-publik.entrouvert.com/admin-fonctionnel/modifier-le-contenu-des-portails/creer-un-menu-personnalise/#creer-un-menu-personnalise">la documentation de Publik à ce sujet</a> (pas totalement ou sous une forme légèrement différente). Je vous invite à consulter la documentation officielle de Publik pour plus d'informations.</p>
+<p>Sachez simplement qu'il vous faudra créer autant de pages de la portail agent que d'éléments que vous souhaitez voir apparaître dans le menu.</p>
+<p><img alt="Pages d'un portail agent dans Publik" src="/images/personnalisation_menu_publik_apercu_pages_portail_agent.jpg"></p>
+<p>Il vous faudra initier une variable système qui activera cette fonction et avoir veillé à définir soigneusement les pages et leur rôle avant de l'activer, sans quoi vous risquez de vous retrouver avec un menu vide.</p>
+<p><img alt="Définition de la visibilité et inclusion dans les menus" src="/images/personnalisation_menu_publik_apercu_paramètres_pages.jpg">
+<img alt="Variable système pour activer la personnalisation du menu" src="/images/personnalisation_menu_publik_variable_hobo_a_definir.jpg"></p>
+<h3>Ma suggestion en terme d'expérience utilisateur</h3>
+<p>J'ai choisi de regrouper les éléments différemment et en trois catégories :</p>
+<ul>
+<li>Agents (Saisie, Traitement, Finances, Utilisateurs)</li>
+<li>Studio (Rôles, Formulaires, Workflows, Fiches, Modèles de fiche, Agendas, Édition « Portail agent », Édition « portail citoyen », Statistiques)</li>
+<li>Système (Identités, Services web, Paramètres).</li>
+</ul>
+<p>La détail apporté à la définition des rôles et visibilité de page permettre une granularité dans ce qui sera affiché à chaque profil d'agent·e.</p>
+<p><img alt="Menu Publik" src="/images/personnaliser-menu-publik.png"></p>
+<h3>Conclusion</h3>
+<p>L'optimisation de l'expérience utilisateur est un enjeu majeur pour les administrations. Que ce soit pour les agents ou les usagers, il est important de faciliter l'accès aux fonctionnalités les plus utilisées.</p>
+<p>Cela représentera un gain de temps pour les agents avec pour finalité, une meilleure expérience utilisateur ces derniers et les usagers des services 'une administration.</p>
+<h3>Références</h3>
+<p><a href="https://doc-publik.entrouvert.com/admin-fonctionnel/modifier-le-contenu-des-portails/creer-un-menu-personnalise/#creer-un-menu-personnalise">Modifier le contenu des portails (documentation officielle Publik)</a>
+<a href="https://doc-publik.entrouvert.com/admin-fonctionnel/modifier-le-contenu-des-portails/creer-un-menu-personnalise/#creer-un-menu-personnalise">Personnaliser le menu du backoffice dans Publik</a></p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://localhost:8181/how-i-improved-my-understanding-time-of-a-clients-problems-in-jira-en.html" rel="bookmark"
+                           title="Permalink to How I improved my understanding time of a client's problems in Jira">How I improved my understanding time of a client's problems in Jira</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2022-10-11T00:00:00+02:00">
                 Published: mar 11 octobre 2022
@@ -34,33 +91,10 @@
         </address>
 <p>In <a href="http://localhost:8181/category/uxui.html">UX/UI</a>.</p>
 <p>tags: <a href="http://localhost:8181/tag/ux.html">UX</a> <a href="http://localhost:8181/tag/ui.html">UI</a> <a href="http://localhost:8181/tag/jira.html">Jira</a> <a href="http://localhost:8181/tag/support.html">support</a> <a href="http://localhost:8181/tag/it.html">IT</a> <a href="http://localhost:8181/tag/ticketing.html">ticketing</a> <a href="http://localhost:8181/tag/ticket.html">ticket</a> <a href="http://localhost:8181/tag/problem.html">problem</a> <a href="http://localhost:8181/tag/understanding.html">understanding</a> <a href="http://localhost:8181/tag/client.html">client</a> <a href="http://localhost:8181/tag/user.html">user</a> <a href="http://localhost:8181/tag/user-experience.html">user experience</a> <a href="http://localhost:8181/tag/user-interface.html">user interface</a> </p>
-</footer><!-- /.post-info --><h3>The problem is it's sometimes hard to understand the problem in a support ticket</h3>
-<p>Clients are not always clear in their support tickets, and it is hard to understand what they are talking about.
-Treating a lot of tickets and reading them with the attention they deserve can be a time and energy consuming task.</p>
-<h3>The solution is to inject my own CSS code snippet in the Jira support page</h3>
-<p>I injected my own CSS code snippet in the Jira support page to improve my understanding time of a client's problems.</p>
-<p>The effect I'm bringing here is a bit reminiscent of the native "reader" modes of browsers that allow you to get rid of all the visual superfluity to offer only the content to be read, presented in a more optimal way.</p>
-<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">user-content-block</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="kc">bold</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">19</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="kc">auto</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</code></pre></div>
-
-<h3>How to inject CSS on any page</h3>
-<p>You can inject CSS on any page using browsers extensions.
-When I got this idea, I was using Firefox, so I used the <a href="https://addons.mozilla.org/en-US/firefox/addon/styl-us/">Stylus</a> extension.</p>
-<h2>Conclusion</h2>
-<p>Because when I'm reading a support ticket, I'm not interested in the visual superfluity of the page, I'm interested in the content of the ticket.
-Improving the readability of the ticket is a way for me to consume less energy and time to understand the problem.
-If it does that for me, it will probably do that for others too.</p>
-<p>Applying this principle to a whole organisation can certainly have a positive impact on the productivity of the support team.</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+</footer><!-- /.post-info -->                <p>I injected my own CSS code snippet in the Jira support page to improve my understanding time of a client's problems.</p>
+                <a class="readmore" href="http://localhost:8181/how-i-improved-my-understanding-time-of-a-clients-problems-in-jira-en.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
@@ -77,7 +111,7 @@ If it does that for me, it will probably do that for others too.</p>
         <address class="vcard author">
                 By                         <a class="url fn" href="http://localhost:8181/author/daniel-muyshond.html">Daniel Muyshond</a>
         </address>
-<p>In <a href="http://localhost:8181/category/pelican.html">Pelican</a>.</p>
+<p>In <a href="http://localhost:8181/category/pelican-static-site-generator.html">Pelican Static Site Generator</a>.</p>
 <p>tags: <a href="http://localhost:8181/tag/pelican.html">pelican</a> <a href="http://localhost:8181/tag/python.html">python</a> <a href="http://localhost:8181/tag/it-problems-encountered.html">it problems encountered</a> <a href="http://localhost:8181/tag/development.html">development</a> </p>
 </footer><!-- /.post-info -->                <p>How to have a devlopment server running locally with Pelican</p>
                 <a class="readmore" href="http://localhost:8181/pelican-devlopment-server.html">read more</a>
@@ -86,7 +120,7 @@ If it does that for me, it will probably do that for others too.</p>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="http://localhost:8181/develop-with-the-minecraft-font-in-your-ide.html" rel="bookmark"
+                    <h1><a href="http://localhost:8181/develop-with-the-minecraft-font-in-your-ide-en.html" rel="bookmark"
                            title="Permalink to Develop with the Minecraft font in your IDE">Develop with the Minecraft font in your IDE</a></h1>
                 </header>
 
@@ -102,13 +136,13 @@ If it does that for me, it will probably do that for others too.</p>
 <p>In <a href="http://localhost:8181/category/general-development-tricks.html">General development tricks</a>.</p>
 <p>tags: <a href="http://localhost:8181/tag/python.html">python</a> <a href="http://localhost:8181/tag/ide.html">IDE</a> <a href="http://localhost:8181/tag/minecraft.html">Minecraft</a> <a href="http://localhost:8181/tag/font.html">font</a> <a href="http://localhost:8181/tag/code.html">code</a> <a href="http://localhost:8181/tag/programming.html">programming</a> </p>
 </footer><!-- /.post-info -->                <p>You can use the Minecraft font in your IDE, it's pretty cool.</p>
-                <a class="readmore" href="http://localhost:8181/develop-with-the-minecraft-font-in-your-ide.html">read more</a>
+                <a class="readmore" href="http://localhost:8181/develop-with-the-minecraft-font-in-your-ide-en.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="http://localhost:8181/how-to-upgrade-pelican-to-the-latest-version.html" rel="bookmark"
+                    <h1><a href="http://localhost:8181/how-to-upgrade-pelican-to-the-latest-version-en.html" rel="bookmark"
                            title="Permalink to How to upgrade Pelican to the latest version">How to upgrade Pelican to the latest version</a></h1>
                 </header>
 
@@ -124,13 +158,13 @@ If it does that for me, it will probably do that for others too.</p>
 <p>In <a href="http://localhost:8181/category/pelican-static-site-generator.html">Pelican Static Site Generator</a>.</p>
 <p>tags: <a href="http://localhost:8181/tag/python.html">python</a> <a href="http://localhost:8181/tag/ssg.html">ssg</a> <a href="http://localhost:8181/tag/pelican.html">pelican</a> <a href="http://localhost:8181/tag/upgrade.html">upgrade</a> <a href="http://localhost:8181/tag/package.html">package</a> <a href="http://localhost:8181/tag/pip.html">pip</a> </p>
 </footer><!-- /.post-info -->                <p>You did not open your pelican repository since a long time and maybe it's time to upgrade.</p>
-                <a class="readmore" href="http://localhost:8181/how-to-upgrade-pelican-to-the-latest-version.html">read more</a>
+                <a class="readmore" href="http://localhost:8181/how-to-upgrade-pelican-to-the-latest-version-en.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="http://localhost:8181/how-to-fetch-youtube-subs-using-python-and-youtube-transcript-api-pip-pkg.html" rel="bookmark"
+                    <h1><a href="http://localhost:8181/how-to-fetch-youtube-subs-using-python-and-youtube-transcript-api-pip-pkg-en.html" rel="bookmark"
                            title="Permalink to How to Fetch YouTube subs using Python and youtube-transcript-api (pip pkg)">How to Fetch YouTube subs using Python and youtube-transcript-api (pip pkg)</a></h1>
                 </header>
 
@@ -143,10 +177,10 @@ If it does that for me, it will probably do that for others too.</p>
         <address class="vcard author">
                 By                         <a class="url fn" href="http://localhost:8181/author/daniel-muyshond.html">Daniel Muyshond</a>
         </address>
-<p>In <a href="http://localhost:8181/category/python-web-tricks.html">Python web tricks</a>.</p>
+<p>In <a href="http://localhost:8181/category/python-tricks.html">Python tricks</a>.</p>
 <p>tags: <a href="http://localhost:8181/tag/python.html">python</a> <a href="http://localhost:8181/tag/web.html">web</a> <a href="http://localhost:8181/tag/youtube.html">YouTube</a> <a href="http://localhost:8181/tag/transcription.html">Transcription</a> <a href="http://localhost:8181/tag/video.html">video</a> <a href="http://localhost:8181/tag/subtitles.html">subtitles</a> </p>
 </footer><!-- /.post-info -->                <p>It is a small test of that python package that allows to fetch YouTube subtitles, even if they are automated, which is pretty cool.</p>
-                <a class="readmore" href="http://localhost:8181/how-to-fetch-youtube-subs-using-python-and-youtube-transcript-api-pip-pkg.html">read more</a>
+                <a class="readmore" href="http://localhost:8181/how-to-fetch-youtube-subs-using-python-and-youtube-transcript-api-pip-pkg-en.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
 
@@ -161,11 +195,15 @@ If it does that for me, it will probably do that for others too.</p>
         <abbr class="published" title="2022-05-22T00:00:00+02:00">
                 Published: dim 22 mai 2022
         </abbr>
+		<br />
+        <abbr class="modified" title="2022-10-16T12:09:00+02:00">
+                Updated: dim 16 octobre 2022
+        </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="http://localhost:8181/author/daniel-muyshond.html">Daniel Muyshond</a>
         </address>
-<p>In <a href="http://localhost:8181/category/etats-dan-etats-dame.html">États Dan (États d'âme)</a>.</p>
+<p>In <a href="http://localhost:8181/category/articles-en-francais-les-etats-dan-etats-dame-blog.html">Articles en français · Les états « Dan » (états d'âme) (blog)</a>.</p>
 <p>tags: <a href="http://localhost:8181/tag/personnal-thoughts.html">personnal thoughts</a> <a href="http://localhost:8181/tag/github.html">github</a> <a href="http://localhost:8181/tag/python.html">python</a> <a href="http://localhost:8181/tag/pelican.html">pelican</a> </p>
 </footer><!-- /.post-info -->                <p>J'ai suivi un guide pour configurer l'intégration continue automatique (CD) d'un site web statique généré par Pelican (Python) sur GitHub Pages en utilisant les GitHub Actions.</p>
                 <a class="readmore" href="http://localhost:8181/mon-premier-blog-post-automatise.html">read more</a>
@@ -175,16 +213,19 @@ If it does that for me, it will probably do that for others too.</p>
                 </section><!-- /#content -->
         <section id="extras" class="body">
                 <div class="blogroll">
-                        <h2>links</h2>
+                        <h3>Links</h3>
                         <ul>
+                            <li><a href="http://localhost:8181/archives.html">Archives (all articles)</a></li>
                             <li><a href="https://getpelican.com/">Pelican</a></li>
                             <li><a href="https://www.python.org/">Python.org</a></li>
                         </ul>
                 </div><!-- /.blogroll -->
                 <div class="social">
-                        <h2>social</h2>
+                        <h3>Social</h3>
                         <ul>
 
+                            <li><a href="https://www.linkedin.com/in/danielmuyshond/">LinkedIn</a></li>
+                            <li><a href="https://twitter.com/_dmshd">Twitter</a></li>
                             <li><a href="https://www.youtube.com/c/DanielMuyshond">YouTube</a></li>
                             <li><a href="https://www.instagram.com/d.mshd_/">Instagram</a></li>
                         </ul>

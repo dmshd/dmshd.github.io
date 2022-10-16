@@ -9,7 +9,7 @@ html {
   h1,h2,h3,h4,h5,h6 {
 	margin: 3em 0 1em;
   }
-  
+
   p,ul,ol {
 	margin-bottom: 0.618em;
 	color: #1d1d1d;
@@ -22,15 +22,23 @@ hr { border: 2px solid #EEEEEE; }
 a {outline: 0;}
 a img {border: 0px; text-decoration: none;}
 a:link, a:visited {
-	color: #C74350;
+	color: #A7202E;
 	padding: 0 1px;
 	text-decoration: underline;
 }
-a:hover, a:active {
-	background-color: #C74350;
+a:hover {
+	background-color: #A7202E;
 	color: #fff;
 	text-decoration: none;
 	text-shadow: 1px 1px 1px #333;
+}
+a:active {
+	background-color: #A7202E;
+	color: #fff;
+	text-decoration: none;
+	text-shadow: 1px 1px 1px #333;
+	border: 1px dotted #050505;
+	box-sizing: border-box;
 }
 
 pre{background-color:  rgb(238, 238, 238); padding: 10px; margin: 10px; overflow: auto;}

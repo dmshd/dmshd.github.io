@@ -18,8 +18,10 @@ DELETE_OUTPUT_DIRECTORY = True
 THEME = 'themes/mycurrentidea'
 # Following items are often useful when publishing
 
-#DISQUS_SITENAME = ""
+DISQUS_SITENAME = "https-www-impavi-de"
 GOOGLE_ANALYTICS = "UA-139715834-1"
 
 STATIC_PATHS = ['images', 'extra/CNAME']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
+
+DISPLAY_PAGES_ON_MENU = True

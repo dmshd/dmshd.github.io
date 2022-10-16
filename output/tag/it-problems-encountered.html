@@ -12,11 +12,11 @@
         <header id="banner" class="body">
                 <h1><a href="http://localhost:8181/">impavi.de</a></h1>
                 <nav><ul>
-                    <li><a href="http://localhost:8181/category/etats-dan-etats-dame.html">États Dan (États d'âme)</a></li>
+                    <li><a href="http://localhost:8181/category/articles-en-francais-les-etats-dan-etats-dame-blog.html">Articles en français · Les états « Dan » (états d'âme) (blog)</a></li>
+                    <li><a href="http://localhost:8181/category/articles-en-francais-publik-le-connecteur-citoyen.html">Articles en français · Publik · Le connecteur citoyen</a></li>
                     <li><a href="http://localhost:8181/category/general-development-tricks.html">General development tricks</a></li>
-                    <li><a href="http://localhost:8181/category/pelican.html">Pelican</a></li>
                     <li><a href="http://localhost:8181/category/pelican-static-site-generator.html">Pelican Static Site Generator</a></li>
-                    <li><a href="http://localhost:8181/category/python-web-tricks.html">Python web tricks</a></li>
+                    <li><a href="http://localhost:8181/category/python-tricks.html">Python tricks</a></li>
                     <li><a href="http://localhost:8181/category/uxui.html">UX/UI</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
@@ -32,9 +32,9 @@
         <address class="vcard author">
                 By                         <a class="url fn" href="http://localhost:8181/author/daniel-muyshond.html">Daniel Muyshond</a>
         </address>
-<p>In <a href="http://localhost:8181/category/pelican.html">Pelican</a>.</p>
+<p>In <a href="http://localhost:8181/category/pelican-static-site-generator.html">Pelican Static Site Generator</a>.</p>
 <p>tags: <a href="http://localhost:8181/tag/pelican.html">pelican</a> <a href="http://localhost:8181/tag/python.html">python</a> <a href="http://localhost:8181/tag/it-problems-encountered.html">it problems encountered</a> <a href="http://localhost:8181/tag/development.html">development</a> </p>
-</footer><!-- /.post-info --><h1>The method using make devserver mentionned on the older Pelican documentation</h1>
+</footer><!-- /.post-info --><h2>The method using make devserver mentionned on the older Pelican documentation</h2>
 <p>Simply run the following command at the root of your Pelican project, where the <code>Makefile</code> file is located:</p>
 <div class="highlight"><pre><span></span><code>make devserver
 </code></pre></div>
@@ -45,17 +45,17 @@
 </code></pre></div>
 
 <p>It can be useful if you already have a server running on port 8000.</p>
-<h1>The method using pelican --listen --autoreload</h1>
+<h2>The method using pelican --listen --autoreload</h2>
 <p>This method seems more recent and is mentionned on the Pelican documention.</p>
 <div class="highlight"><pre><span></span><code><span class="n">pelican</span><span class="w"> </span><span class="o">--</span><span class="n">listen</span><span class="w"> </span><span class="o">--</span><span class="n">autoreload</span><span class="w"> </span><span class="o">--</span><span class="n">port</span><span class="w"> </span><span class="mi">8181</span><span class="w"></span>
 </code></pre></div>
 
 <p>Note : <code>--port</code> is optional, the default port is 8000.</p>
-<h2>What if local server does not serve static files like CSS?</h2>
+<h3>What if local server does not serve static files like CSS?</h3>
 <p>You might have a problem with the static files like CSS not being served by the local server. This is probably because the <code>pelicanconf.py</code> is configured with the same <code>SITEURL</code> as the production settings set in <code>publishconf.py</code>. You can fix this by changing the <code>SITEURL</code> in the <code>pelicanconf.py</code> file to <code>http://localhost:8000</code> or <code>http://localhost:8181</code> depending on the port you are using.</p>
-<h1>Conclusion</h1>
+<h2>Conclusion</h2>
 <p>Beginning with Pelican can be a bit tricky. I hope this article will help you to get started with Pelican.</p>
-<h2>References</h2>
+<h3>References</h3>
 <ul>
 <li><a href="https://docs.getpelican.com/en/stable/">Pelican documentation</a></li>
 <li><a href="https://docs.getpelican.com/en/stable/quickstart.html#developing-your-site">Pelican documentation - Quickstart</a></li>
@@ -64,16 +64,19 @@
             </aside><!-- /#featured -->
         <section id="extras" class="body">
                 <div class="blogroll">
-                        <h2>links</h2>
+                        <h3>Links</h3>
                         <ul>
+                            <li><a href="http://localhost:8181/archives.html">Archives (all articles)</a></li>
                             <li><a href="https://getpelican.com/">Pelican</a></li>
                             <li><a href="https://www.python.org/">Python.org</a></li>
                         </ul>
                 </div><!-- /.blogroll -->
                 <div class="social">
-                        <h2>social</h2>
+                        <h3>Social</h3>
                         <ul>
 
+                            <li><a href="https://www.linkedin.com/in/danielmuyshond/">LinkedIn</a></li>
+                            <li><a href="https://twitter.com/_dmshd">Twitter</a></li>
                             <li><a href="https://www.youtube.com/c/DanielMuyshond">YouTube</a></li>
                             <li><a href="https://www.instagram.com/d.mshd_/">Instagram</a></li>
                         </ul>

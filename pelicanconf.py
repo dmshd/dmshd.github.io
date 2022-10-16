@@ -1,6 +1,6 @@
 AUTHOR = 'Daniel Muyshond'
 SITENAME = 'impavi.de'
-SITEURL = 'http://localhost:8181/'
+SITEURL = 'http://localhost:8181'
 
 PATH = 'content'
 
@@ -16,15 +16,26 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Pelican', 'https://getpelican.com/'),
-         ('Python.org', 'https://www.python.org/'),)
+LINKS = (
+    ('Archives (all articles)', 'http://localhost:8181/archives.html'),
+    ('Pelican', 'https://getpelican.com/'),
+    ('Python.org', 'https://www.python.org/')
+)
+LINKS_WIDGET_NAME = 'Links'
 
 # Social widget
-SOCIAL = (('YouTube', 'https://www.youtube.com/c/DanielMuyshond'),
-          ('Instagram', 'https://www.instagram.com/d.mshd_/'),)
+SOCIAL = (
+    ('LinkedIn', 'https://www.linkedin.com/in/danielmuyshond/'),
+    ('Twitter', 'https://twitter.com/_dmshd'),
+    ('YouTube', 'https://www.youtube.com/c/DanielMuyshond'),
+    ('Instagram', 'https://www.instagram.com/d.mshd_/')
+)
+SOCIAL_WIDGET_NAME = 'Social'
 
 DEFAULT_PAGINATION = 7
 THEME = 'themes/mycurrentidea'
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+DISPLAY_PAGES_ON_MENU = True

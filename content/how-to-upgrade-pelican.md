@@ -4,6 +4,8 @@ Category: Pelican Static Site Generator
 Tags: python, ssg, pelican, upgrade, package, pip
 Author: Daniel Muyshond
 Summary: You did not open your pelican repository since a long time and maybe it's time to upgrade.
+Lang: en
+Translation: false
 
 ## Upgrading pelican ssg python package
 
