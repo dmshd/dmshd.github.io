@@ -9,6 +9,13 @@ My GitHub Pages website is using Pelican and Github-Pages to generate a static w
 3. pelican --listen --autoreload --port 8181
 4. open http://localhost:8181
 
+
+
 ## TODO (already done)
 
 * [*] Custom 404 page https://docs.getpelican.com/en/stable/tips.html#id1
+
+
+### Notes
+
+`ghp-import output -n -b gh-pages --cname=CNAME`
