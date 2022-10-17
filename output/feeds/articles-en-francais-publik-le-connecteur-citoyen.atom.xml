@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>impavi.de - Articles en français · Publik · Le connecteur citoyen</title><link href="https://www.impavi.de/" rel="alternate"></link><link href="https://www.impavi.de/feeds/articles-en-francais-publik-le-connecteur-citoyen.atom.xml" rel="self"></link><id>https://www.impavi.de/</id><updated>2022-10-16T15:22:00+02:00</updated><entry><title>Comment afficher la date et l'heure de façon optimale dans Publik ?</title><link href="https://www.impavi.de/comment-afficher-la-date-et-l-heure-de-facon-optimale-dans-publik.html" rel="alternate"></link><published>2022-10-16T15:22:00+02:00</published><updated>2022-10-16T15:22:00+02:00</updated><author><name>Daniel Muyshond</name></author><id>tag:www.impavi.de,2022-10-16:/comment-afficher-la-date-et-l-heure-de-facon-optimale-dans-publik.html</id><summary type="html">&lt;p&gt;Afficher la date et l'heure de façon plus optimale et lisible dans Publik améliore l'expérience utilisateur&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Comment afficher la date et l'heure de façon optimale dans Publik ?&lt;/h2&gt;
+&lt;p&gt;Publik utilise le format de date et d'heure suivant : &lt;code&gt;2022-10-16 15:25:00&lt;/code&gt;. C'est un format qui est utilisé par les développeurs et qui est facile à trier. Cependant, ce format n'est pas très lisible pour les utilisateurs. Il est donc préférable de l'afficher de façon plus optimale et lisible.&lt;/p&gt;
+&lt;h3&gt;Afficher la date et l'heure dans un gabarit Django&lt;/h3&gt;
+&lt;p&gt;Dans un gabarit Django, il est possible d'afficher la date et l'heure de façon plus optimale et lisible. Par exemple, pour afficher la date et l'heure de la variable &lt;code&gt;form_var_date&lt;/code&gt; issue d'un formulaire, il suffit d'utiliser le filtre &lt;code&gt;|date&lt;/code&gt; de Django :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="x"&gt;Votre rendez vous à été confirmé le `&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;form_workflow_data_reservation_response_datetime&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="nf"&gt;date&lt;/span&gt;&lt;span class="s2"&gt;:&amp;quot;l d F&amp;quot;&lt;/span&gt;&lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;` à `&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;form_workflow_data_reservation_response_datetime&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="nf"&gt;date&lt;/span&gt;&lt;span class="s2"&gt;:&amp;quot;G\hH&amp;quot;&lt;/span&gt;&lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;`.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Signification des valeurs de formatage passées au filtre &lt;code&gt;|date&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Le filtre &lt;code&gt;|date:"l d F"&lt;/code&gt; appliqué à une variable permet d'afficher la date en français (exemple : dimanche 16 octobre).&lt;/p&gt;
+&lt;p&gt;Le filtre &lt;code&gt;|date:"G\hH"&lt;/code&gt; permet d'afficher l'heure à la française (exemple : 13h30).&lt;/p&gt;
+&lt;p&gt;Vous avez un profil de technicien et vous souhaitez connaître le pourquoi du comment ? Retrouvez le détail du filtre &lt;code&gt;|date&lt;/code&gt; dans la documentation de Django, dans les références de cet article (en bas de la page, après la conclusion).&lt;/p&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Appliquer cette astuce &lt;a href="https://doc-publik.entrouvert.com/admin-fonctionnel/fabrique-de-workflows/les-actions-de-workflow/elements_envoyer-un-email/#envoyer-un-courriel"&gt;dans un mail&lt;/a&gt;, &lt;a href="https://doc-publik.entrouvert.com/admin-fonctionnel/fabrique-de-workflows/les-actions-de-workflow/elements_afficher-un-message/#alerte"&gt;une action de workflow « Alerte »&lt;/a&gt; ou un une &lt;a href="https://doc-publik.entrouvert.com/admin-fonctionnel/fabrique-de-workflows/les-actions-de-workflow/elements_enregistrer-dans-le-journal/#enregistrer-un-message-dans-lhistorique"&gt;action de workflow « Message dans l'historique »&lt;/a&gt; permet de rendre l'expérience utilisateur plus agréable pour les utilisateurs, que ce soit les administrateurs ou les citoyens.&lt;/p&gt;
+&lt;p&gt;Une expérience utilisateur soignée et optimale est un facteur clé de succès pour tout projet de numérisation de processus.&lt;/p&gt;
+&lt;h3&gt;Références&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://publik.entrouvert.com/"&gt;Publik, le connecteur citoyen&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://doc-publik.entrouvert.com/admin-fonctionnel/parametrage-avance/utiliser-les-filtres/#utiliser-les-filtres"&gt;Documentation de Publik · Utiliser les filtres&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://doc-publik.entrouvert.com/admin-fonctionnel/parametrage-avance/utiliser-les-filtres/#filtres-sur-les-dates"&gt;Documentation de Publik · Filtre sur les dates&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.djangoproject.com/en/4.1/ref/templates/builtins/#date"&gt;Documentation Django : Filtre date&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Articles en français · Publik · Le connecteur citoyen"></category><category term="UX"></category><category term="UI"></category><category term="publik"></category><category term="administrateur fonctionnel"></category><category term="gabarits django"></category><category term="expérience utilisateur"></category></entry><entry><title>Articles en français · Comment personnaliser le menu du backoffice dans Publik ?</title><link href="https://www.impavi.de/comment-personnaliser-le-menu-du-backoffice-dans-publik.html" rel="alternate"></link><published>2022-10-16T11:27:00+02:00</published><updated>2022-10-16T11:27:00+02:00</updated><author><name>Daniel Muyshond</name></author><id>tag:www.impavi.de,2022-10-16:/comment-personnaliser-le-menu-du-backoffice-dans-publik.html</id><summary type="html">&lt;p&gt;Comment personnaliser le menu du backoffice dans Publik ?&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Comment personnaliser le menu du backoffice dans Publik ?&lt;/h2&gt;
+&lt;p&gt;Le menu standard peut être optimisé en fonction des besoins de l'administration. Il est possible de personnaliser le menu du backoffice dans Publik.
+Cela permettra de simplifier l'accès aux fonctionnalités les plus utilisées par les agents en fonction de leur(s) rôle(s).&lt;/p&gt;
+&lt;h3&gt;Prérequis&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Avoir un compte administrateur fonctionnel sur Publik&lt;/li&gt;
+&lt;li&gt;Être à même de modifier le contenu des portails, des pages, de définir des rôles et la visibilité des pages et contenu en fonction de ces derniers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Procédure&lt;/h3&gt;
+&lt;p&gt;Je ne vais pas réécrire ici ce qui figure dans &lt;a href="https://doc-publik.entrouvert.com/admin-fonctionnel/modifier-le-contenu-des-portails/creer-un-menu-personnalise/#creer-un-menu-personnalise"&gt;la documentation de Publik à ce sujet&lt;/a&gt; (pas totalement ou sous une forme légèrement différente). Je vous invite à consulter la documentation officielle de Publik pour plus d'informations.&lt;/p&gt;
+&lt;p&gt;Sachez simplement qu'il vous faudra créer autant de pages de la portail agent que d'éléments que vous souhaitez voir apparaître dans le menu.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pages d'un portail agent dans Publik" src="/images/personnalisation_menu_publik_apercu_pages_portail_agent.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Il vous faudra initier une variable système qui activera cette fonction et avoir veillé à définir soigneusement les pages et leur rôle avant de l'activer, sans quoi vous risquez de vous retrouver avec un menu vide.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Définition de la visibilité et inclusion dans les menus" src="/images/personnalisation_menu_publik_apercu_paramètres_pages.jpg"&gt;
+&lt;img alt="Variable système pour activer la personnalisation du menu" src="/images/personnalisation_menu_publik_variable_hobo_a_definir.jpg"&gt;&lt;/p&gt;
+&lt;h3&gt;Ma suggestion en terme d'expérience utilisateur&lt;/h3&gt;
+&lt;p&gt;J'ai choisi de regrouper les éléments différemment et en trois catégories :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Agents (Saisie, Traitement, Finances, Utilisateurs)&lt;/li&gt;
+&lt;li&gt;Studio (Rôles, Formulaires, Workflows, Fiches, Modèles de fiche, Agendas, Édition « Portail agent », Édition « portail citoyen », Statistiques)&lt;/li&gt;
+&lt;li&gt;Système (Identités, Services web, Paramètres).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;La détail apporté à la définition des rôles et visibilité de page permettre une granularité dans ce qui sera affiché à chaque profil d'agent·e.&lt;/p&gt;
+&lt;h3&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;L'optimisation de l'expérience utilisateur est un enjeu majeur pour les administrations. Que ce soit pour les agents ou les usagers, il est important de faciliter l'accès aux fonctionnalités les plus utilisées.&lt;/p&gt;
+&lt;p&gt;Cela représentera un gain de temps pour les agents avec pour finalité, une meilleure expérience utilisateur de ces derniers, ainsi que par ruissellement, pour les usagers finaux des services d'une administration.&lt;/p&gt;
+&lt;h3&gt;Références&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://doc-publik.entrouvert.com/admin-fonctionnel/modifier-le-contenu-des-portails/creer-un-menu-personnalise/#creer-un-menu-personnalise"&gt;Modifier le contenu des portails (documentation officielle Publik)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://doc-publik.entrouvert.com/admin-fonctionnel/modifier-le-contenu-des-portails/creer-un-menu-personnalise/#creer-un-menu-personnalise"&gt;Personnaliser le menu du backoffice dans Publik&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><category term="Articles en français · Publik · Le connecteur citoyen"></category><category term="UX"></category><category term="UI"></category><category term="publik"></category><category term="administrateur fonctionnel"></category><category term="menu"></category><category term="backoffice"></category></entry></feed>
