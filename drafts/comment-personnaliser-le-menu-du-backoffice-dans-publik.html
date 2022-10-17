@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="generator" content="Pelican" />
+        <title>Comment personnaliser le menu du backoffice dans Publik ?</title>
+        <link rel="stylesheet" href="http://localhost:8181/theme/css/main.css" />
+        <meta name="description" content="Comment personnaliser le menu du backoffice dans Publik ?" />
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="http://localhost:8181/">impavi.de</a></h1>
+                <nav><ul>
+                    <li><a href="http://localhost:8181/category/etats-dan-etats-dame.html">États Dan (États d'âme)</a></li>
+                    <li><a href="http://localhost:8181/category/general-development-tricks.html">General development tricks</a></li>
+                    <li><a href="http://localhost:8181/category/pelican.html">Pelican</a></li>
+                    <li><a href="http://localhost:8181/category/pelican-static-site-generator.html">Pelican Static Site Generator</a></li>
+                    <li><a href="http://localhost:8181/category/python-web-tricks.html">Python web tricks</a></li>
+                    <li><a href="http://localhost:8181/category/uxui.html">UX/UI</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="http://localhost:8181/drafts/comment-personnaliser-le-menu-du-backoffice-dans-publik.html" rel="bookmark"
+           title="Permalink to Comment personnaliser le menu du backoffice dans Publik ?">Comment personnaliser le menu du backoffice dans Publik ?</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2022-10-16T11:27:00+02:00">
+                Published: dim 16 octobre 2022
+        </abbr>
+		<br />
+        <abbr class="modified" title="2022-10-16T11:27:00+02:00">
+                Updated: dim 16 octobre 2022
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="http://localhost:8181/author/daniel-muyshond.html">Daniel Muyshond</a>
+        </address>
+<p>In <a href="http://localhost:8181/category/uxui-publik-le-connecteur-citoyen.html">UX/UI, Publik · Le connecteur citoyen</a>.</p>
+<p>tags: <a href="http://localhost:8181/tag/ux.html">UX</a> <a href="http://localhost:8181/tag/ui.html">UI</a> <a href="http://localhost:8181/tag/publik.html">publik</a> <a href="http://localhost:8181/tag/administrateur-fonctionnel.html">administrateur fonctionnel</a> <a href="http://localhost:8181/tag/menu.html">menu</a> <a href="http://localhost:8181/tag/backoffice.html">backoffice</a> </p>
+</footer><!-- /.post-info -->      <h2>Comment personnaliser le menu du backoffice dans Publik ?</h2>
+<p>Le menu standard peut être optimisé en fonction des besoins de l'administration. Il est possible de personnaliser le menu du backoffice dans Publik.
+Cela permettra de simplifier l'accès aux fonctionnalités les plus utilisées par les agents en fonction de leur(s) rôle(s).</p>
+<h3>Prérequis</h3>
+<ul>
+<li>Avoir un compte administrateur fonctionnel sur Publik</li>
+<li>Être à même de modifier le contenu des portails, des pages, de définir des rôles et la visibilité des pages et contenu en fonction de ces derniers.</li>
+</ul>
+<h3>Procédure</h3>
+<p>Je ne vais pas réécrire ici ce qui figure dans la documentation de Publik à ce sujet. Je vous invite à consulter la documentation officielle de Publik pour plus d'informations.</p>
+<p>Sachez simplement qu'il vous faudra créer autant de pages de la portail agent que d'éléments que vous souhaitez voir apparaître dans le menu.</p>
+<p><img alt="Pages d'un portail agent dans Publik" src="/images/personnalisation_menu_publik_apercu_pages_portail_agent.jpg"></p>
+<p>Il vous faudra initier une variable système qui activera cette fonction et avoir veillé à définir soigneusement les pages et leur rôle avant de l'activer, sans quoi vous risquez de vous retrouver avec un menu vide.</p>
+<p><img alt="Définition de la visibilité et inclusion dans les menus" src="/images/personnalisation_menu_publik_apercu_paramètres_pages.jpg">
+<img alt="Variable système pour activer la personnalisation du menu" src="/images/personnalisation_menu_publik_variable_hobo_a_definir.jpg"></p>
+<h3>Ma suggestion en terme d'expérience utilisateur</h3>
+<p>J'ai choisi de regrouper les éléments différemment et en trois catégories :</p>
+<ul>
+<li>Agents (Saisie, Traitement, Finances, Utilisateurs)</li>
+<li>Studio (Rôles, Formulaires, Workflows, Fiches, Modèles de fiche, Agendas, Édition « Portail agent », Édition « portail citoyen », Statistiques)</li>
+<li>Système (Identités, Services web, Paramètres).</li>
+</ul>
+<p>La détail apporté à la définition des rôles et visibilité de page permettre une granularité dans ce qui sera affiché à chaque profil d'agent·e.</p>
+<p><img alt="Menu Publik" src="/images/personnaliser-menu-publik.png"></p>
+<h3>Conclusion</h3>
+<p>L'optimisation de l'expérience utilisateur est un enjeu majeur pour les administrations. Que ce soit pour les agents ou les usagers, il est important de faciliter l'accès aux fonctionnalités les plus utilisées.</p>
+<p>Cela représentera un gain de temps pour les agents avec pour finalité, une meilleure expérience utilisateur ces derniers et les usagers des services 'une administration.</p>
+<h3>Références</h3>
+<p><a href="https://doc-publik.entrouvert.com/admin-fonctionnel/modifier-le-contenu-des-portails/creer-un-menu-personnalise/#creer-un-menu-personnalise">Modifier le contenu des portails (documentation officielle Publik)</a></p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>Links</h2>
+                        <ul>
+                            <li><a href="https://getpelican.com/">Pelican</a></li>
+                            <li><a href="https://www.python.org/">Python.org</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>Social</h2>
+                        <ul>
+
+                            <li><a href="https://www.youtube.com/c/DanielMuyshond">YouTube</a></li>
+                            <li><a href="https://www.instagram.com/d.mshd_/">Instagram</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="https://getpelican.com/">Pelican</a>, which takes great advantage of <a href="https://www.python.org/">Python</a>.
+                </address><!-- /#about -->
+
+<p>The theme is custom-made with parts of  <a href="https://www.swyx.io/css-100-bytes">100 Bytes of CSS to look great everywhere</a>, from <a href="https://www.swyx.io/about">swyx</a>, and <a href="https://github.com/getpelican/pelican/tree/master/pelican/themes/notmyidea/templates">templates of 'notmyidea' Pelican default theme</a>, thanks!</p>        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
