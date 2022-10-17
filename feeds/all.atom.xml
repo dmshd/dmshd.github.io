@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>impavi.de</title><link href="https://www.impavi.de/" rel="alternate"></link><link href="https://www.impavi.de/feeds/all.atom.xml" rel="self"></link><id>https://www.impavi.de/</id><updated>2022-10-16T15:22:00+02:00</updated><entry><title>Comment afficher la date et l'heure de façon optimale dans Publik ?</title><link href="https://www.impavi.de/comment-afficher-la-date-et-l-heure-de-facon-optimale-dans-publik.html" rel="alternate"></link><published>2022-10-16T15:22:00+02:00</published><updated>2022-10-16T15:22:00+02:00</updated><author><name>Daniel Muyshond</name></author><id>tag:www.impavi.de,2022-10-16:/comment-afficher-la-date-et-l-heure-de-facon-optimale-dans-publik.html</id><summary type="html">&lt;p&gt;Afficher la date et l'heure de façon plus optimale et lisible dans Publik améliore l'expérience utilisateur&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Comment afficher la date et l'heure de façon optimale dans Publik ?&lt;/h2&gt;
+&lt;p&gt;Publik utilise le format de date et d'heure suivant : &lt;code&gt;2022-10-16 15:25:00&lt;/code&gt;. C'est un format qui est utilisé par les développeurs et qui est facile à trier. Cependant, ce format n'est pas très lisible pour les utilisateurs. Il est donc préférable de l'afficher de façon plus optimale et lisible.&lt;/p&gt;
+&lt;h3&gt;Afficher la date et l'heure dans un gabarit Django&lt;/h3&gt;
+&lt;p&gt;Dans un gabarit Django, il est possible d'afficher la date et l'heure de façon plus optimale et lisible. Par exemple, pour afficher la date et l'heure de la variable &lt;code&gt;form_var_date&lt;/code&gt; issue d'un formulaire, il suffit d'utiliser le filtre &lt;code&gt;|date&lt;/code&gt; de Django :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="x"&gt;Votre rendez vous à été confirmé le `&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;form_workflow_data_reservation_response_datetime&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="nf"&gt;date&lt;/span&gt;&lt;span class="s2"&gt;:&amp;quot;l d F&amp;quot;&lt;/span&gt;&lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;` à `&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;form_workflow_data_reservation_response_datetime&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="nf"&gt;date&lt;/span&gt;&lt;span class="s2"&gt;:&amp;quot;G\hH&amp;quot;&lt;/span&gt;&lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="x"&gt;`.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Signification des valeurs de formatage passées au filtre &lt;code&gt;|date&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Le filtre &lt;code&gt;|date:"l d F"&lt;/code&gt; appliqué à une variable permet d'afficher la date en français (exemple : dimanche 16 octobre).&lt;/p&gt;
+&lt;p&gt;Le filtre &lt;code&gt;|date:"G\hH"&lt;/code&gt; permet d'afficher l'heure à la française (exemple : 13h30).&lt;/p&gt;
+&lt;p&gt;Vous avez un profil de technicien et vous souhaitez connaître le pourquoi du comment ? Retrouvez le détail du filtre &lt;code&gt;|date&lt;/code&gt; dans la documentation de Django, dans les références de cet article (en bas de la page, après la conclusion).&lt;/p&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Appliquer cette astuce &lt;a href="https://doc-publik.entrouvert.com/admin-fonctionnel/fabrique-de-workflows/les-actions-de-workflow/elements_envoyer-un-email/#envoyer-un-courriel"&gt;dans un mail&lt;/a&gt;, &lt;a href="https://doc-publik.entrouvert.com/admin-fonctionnel/fabrique-de-workflows/les-actions-de-workflow/elements_afficher-un-message/#alerte"&gt;une action de workflow « Alerte »&lt;/a&gt; ou un une &lt;a href="https://doc-publik.entrouvert.com/admin-fonctionnel/fabrique-de-workflows/les-actions-de-workflow/elements_enregistrer-dans-le-journal/#enregistrer-un-message-dans-lhistorique"&gt;action de workflow « Message dans l'historique »&lt;/a&gt; permet de rendre l'expérience utilisateur plus agréable pour les utilisateurs, que ce soit les administrateurs ou les citoyens.&lt;/p&gt;
+&lt;p&gt;Une expérience utilisateur soignée et optimale est un facteur clé de succès pour tout projet de numérisation de processus.&lt;/p&gt;
+&lt;h3&gt;Références&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://publik.entrouvert.com/"&gt;Publik, le connecteur citoyen&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://doc-publik.entrouvert.com/admin-fonctionnel/parametrage-avance/utiliser-les-filtres/#utiliser-les-filtres"&gt;Documentation de Publik · Utiliser les filtres&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://doc-publik.entrouvert.com/admin-fonctionnel/parametrage-avance/utiliser-les-filtres/#filtres-sur-les-dates"&gt;Documentation de Publik · Filtre sur les dates&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.djangoproject.com/en/4.1/ref/templates/builtins/#date"&gt;Documentation Django : Filtre date&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Articles en français · Publik · Le connecteur citoyen"></category><category term="UX"></category><category term="UI"></category><category term="publik"></category><category term="administrateur fonctionnel"></category><category term="gabarits django"></category><category term="expérience utilisateur"></category></entry><entry><title>How to scrap favicon from a website using Python</title><link href="https://www.impavi.de/how-to-scrap-favicon-from-a-website-using-python-en.html" rel="alternate"></link><published>2022-10-16T14:26:00+02:00</published><updated>2022-10-16T14:26:00+02:00</updated><author><name>Daniel Muyshond</name></author><id>tag:www.impavi.de,2022-10-16:/how-to-scrap-favicon-from-a-website-using-python-en.html</id><summary type="html">&lt;p&gt;I was tired of having to manually download favicons from websites, so I made a small script to do it for me.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;The context of scraping favicons&lt;/h2&gt;
+&lt;p&gt;During my work, I often have to initiate graphical themes for our clients and look for their assets (logo, favicon, etc.).
+It doesn's take long time to connect to the website and download the favicon, but it's a bit boring to do it manually.
+If it can be automated, why not?&lt;/p&gt;
+&lt;h2&gt;The script to scrap favicons&lt;/h2&gt;
+&lt;p&gt;Here is the code snippet I just generated to scrap favicons from websites.
+It takes a url as input and downloads the favicon in the current directory.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;Scrap favicon asset from a website.&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;urllib.request&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;urllib.parse&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;urlparse&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;requests&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bs4&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;BeautifulSoup&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;scrap_favicon&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;    Scrap favicon from a website.&lt;/span&gt;
+&lt;span class="sd"&gt;    &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+    &lt;span class="c1"&gt;# Get the domain name&lt;/span&gt;
+    &lt;span class="n"&gt;domain_name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;urlparse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;netloc&lt;/span&gt;
+    &lt;span class="c1"&gt;# Get the favicon url&lt;/span&gt;
+    &lt;span class="n"&gt;response&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;requests&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;soup&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;BeautifulSoup&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;response&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;html.parser&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;favicon_url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;soup&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;link&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;rel&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;shortcut icon&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;href&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="c1"&gt;# Download the favicon&lt;/span&gt;
+    &lt;span class="n"&gt;urllib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;urlretrieve&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;favicon_url&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;favicon&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;.ico&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;argv&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Usage: python3 scrap_favicon.py &amp;lt;url&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;argv&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="n"&gt;scrap_favicon&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;I now have a script that scrap favicons from websites and so you are welcome to use or adjust it following your needs too.&lt;/p&gt;</content><category term="Python tricks, automation and web scraping"></category><category term="python"></category><category term="web"></category><category term="favicon"></category><category term="scraping"></category></entry><entry><title>How to prind out text from a generated pdf file in Python with pdfplumber</title><link href="https://www.impavi.de/how-to-prind-out-text-from-a-generated-pdf-file-in-python-with-pdfplumber-en.html" rel="alternate"></link><published>2022-10-16T14:20:00+02:00</published><updated>2022-10-16T14:20:00+02:00</updated><author><name>Daniel Muyshond</name></author><id>tag:www.impavi.de,2022-10-16:/how-to-prind-out-text-from-a-generated-pdf-file-in-python-with-pdfplumber-en.html</id><summary type="html">&lt;p&gt;How to print out text from a generated pdf file in Python with pdfplumber&lt;/p&gt;</summary><content type="html">&lt;h2&gt;How to print out text from a generated pdf file in Python with pdfplumber&lt;/h2&gt;
+&lt;h3&gt;The context of me need to extract text from a pdf&lt;/h3&gt;
+&lt;p&gt;I would like to extract the data from my account statements in PDF.&lt;/p&gt;
+&lt;p&gt;After searching, it seems that &lt;a href="https://github.com/jsvine/pdfplumber"&gt;pdfplumber&lt;/a&gt; is strong enough to extract the text from generated pdf.&lt;/p&gt;
+&lt;p&gt;Here's a quick try with &lt;a href="https://static.societegenerale.fr/pri/PRI/Repertoire_par_type_de_contenus/Fichier_a_telecharger/nouveau-releve-compte.pdf"&gt;a sample pdf file I found on the web&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;The code I just generated to extract text from a pdf&lt;/h3&gt;
+&lt;p&gt;Here is a small code snippet I just made to print out text from a generated pdf file in Python with pdfplumber :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;Takes a pdf file prints out the text of it&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pdfplumber&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;argparse&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;parser&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;argparse&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ArgumentParser&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_argument&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;-f&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;--file&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;help&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;pdf file to extract text from&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;required&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;args&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;parse_args&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;pdf_file&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;file&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exists&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pdf_file&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;File does not exist&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;pdfplumber&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pdf_file&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;pdf&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;page&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;pdf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pages&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;page&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;extract_text&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;I now have all the text printing in the terminal.&lt;/p&gt;
+&lt;p&gt;All that would be left to do is to identify the lines corresponding to the transactions (at first sight starting with a date and containing numbers, perhaps confirming with &lt;code&gt;startswith()&lt;/code&gt; or a neat regex and you have the beginnings of a trick to classify your transactions.&lt;/p&gt;</content><category term="Python tricks, automation and web scraping"></category><category term="pdfplumber"></category><category term="pdf"></category><category term="python"></category><category term="automation"></category><category term="text extraction"></category><category term="pdf text extraction"></category><category term="pdf text extraction python"></category><category term="pdf text extraction python pdfplumber"></category></entry><entry><title>Articles en français · Comment personnaliser le menu du backoffice dans Publik ?</title><link href="https://www.impavi.de/comment-personnaliser-le-menu-du-backoffice-dans-publik.html" rel="alternate"></link><published>2022-10-16T11:27:00+02:00</published><updated>2022-10-16T11:27:00+02:00</updated><author><name>Daniel Muyshond</name></author><id>tag:www.impavi.de,2022-10-16:/comment-personnaliser-le-menu-du-backoffice-dans-publik.html</id><summary type="html">&lt;p&gt;Comment personnaliser le menu du backoffice dans Publik ?&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Comment personnaliser le menu du backoffice dans Publik ?&lt;/h2&gt;
+&lt;p&gt;Le menu standard peut être optimisé en fonction des besoins de l'administration. Il est possible de personnaliser le menu du backoffice dans Publik.
+Cela permettra de simplifier l'accès aux fonctionnalités les plus utilisées par les agents en fonction de leur(s) rôle(s).&lt;/p&gt;
+&lt;h3&gt;Prérequis&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Avoir un compte administrateur fonctionnel sur Publik&lt;/li&gt;
+&lt;li&gt;Être à même de modifier le contenu des portails, des pages, de définir des rôles et la visibilité des pages et contenu en fonction de ces derniers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Procédure&lt;/h3&gt;
+&lt;p&gt;Je ne vais pas réécrire ici ce qui figure dans &lt;a href="https://doc-publik.entrouvert.com/admin-fonctionnel/modifier-le-contenu-des-portails/creer-un-menu-personnalise/#creer-un-menu-personnalise"&gt;la documentation de Publik à ce sujet&lt;/a&gt; (pas totalement ou sous une forme légèrement différente). Je vous invite à consulter la documentation officielle de Publik pour plus d'informations.&lt;/p&gt;
+&lt;p&gt;Sachez simplement qu'il vous faudra créer autant de pages de la portail agent que d'éléments que vous souhaitez voir apparaître dans le menu.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pages d'un portail agent dans Publik" src="/images/personnalisation_menu_publik_apercu_pages_portail_agent.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Il vous faudra initier une variable système qui activera cette fonction et avoir veillé à définir soigneusement les pages et leur rôle avant de l'activer, sans quoi vous risquez de vous retrouver avec un menu vide.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Définition de la visibilité et inclusion dans les menus" src="/images/personnalisation_menu_publik_apercu_paramètres_pages.jpg"&gt;
+&lt;img alt="Variable système pour activer la personnalisation du menu" src="/images/personnalisation_menu_publik_variable_hobo_a_definir.jpg"&gt;&lt;/p&gt;
+&lt;h3&gt;Ma suggestion en terme d'expérience utilisateur&lt;/h3&gt;
+&lt;p&gt;J'ai choisi de regrouper les éléments différemment et en trois catégories :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Agents (Saisie, Traitement, Finances, Utilisateurs)&lt;/li&gt;
+&lt;li&gt;Studio (Rôles, Formulaires, Workflows, Fiches, Modèles de fiche, Agendas, Édition « Portail agent », Édition « portail citoyen », Statistiques)&lt;/li&gt;
+&lt;li&gt;Système (Identités, Services web, Paramètres).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;La détail apporté à la définition des rôles et visibilité de page permettre une granularité dans ce qui sera affiché à chaque profil d'agent·e.&lt;/p&gt;
+&lt;h3&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;L'optimisation de l'expérience utilisateur est un enjeu majeur pour les administrations. Que ce soit pour les agents ou les usagers, il est important de faciliter l'accès aux fonctionnalités les plus utilisées.&lt;/p&gt;
+&lt;p&gt;Cela représentera un gain de temps pour les agents avec pour finalité, une meilleure expérience utilisateur de ces derniers, ainsi que par ruissellement, pour les usagers finaux des services d'une administration.&lt;/p&gt;
+&lt;h3&gt;Références&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://doc-publik.entrouvert.com/admin-fonctionnel/modifier-le-contenu-des-portails/creer-un-menu-personnalise/#creer-un-menu-personnalise"&gt;Modifier le contenu des portails (documentation officielle Publik)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://doc-publik.entrouvert.com/admin-fonctionnel/modifier-le-contenu-des-portails/creer-un-menu-personnalise/#creer-un-menu-personnalise"&gt;Personnaliser le menu du backoffice dans Publik&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><category term="Articles en français · Publik · Le connecteur citoyen"></category><category term="UX"></category><category term="UI"></category><category term="publik"></category><category term="administrateur fonctionnel"></category><category term="menu"></category><category term="backoffice"></category></entry><entry><title>How I improved my understanding time of a client's problems in Jira</title><link href="https://www.impavi.de/how-i-improved-my-understanding-time-of-a-clients-problems-in-jira-en.html" rel="alternate"></link><published>2022-10-11T00:00:00+02:00</published><updated>2022-10-11T00:00:00+02:00</updated><author><name>Daniel Muyshond</name></author><id>tag:www.impavi.de,2022-10-11:/how-i-improved-my-understanding-time-of-a-clients-problems-in-jira-en.html</id><summary type="html">&lt;p&gt;I injected my own CSS code snippet in the Jira support page to improve my understanding time of a client's problems.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;The problem is it's sometimes hard to understand the problem in a support ticket&lt;/h2&gt;
+&lt;p&gt;Clients are not always clear in their support tickets, and it is hard to understand what they are talking about.
+Treating a lot of tickets and reading them with the attention they deserve can be a time and energy consuming task.&lt;/p&gt;
+&lt;h2&gt;The solution is to inject my own CSS code snippet in the Jira support page&lt;/h2&gt;
+&lt;p&gt;I injected my own CSS code snippet in the Jira support page to improve my understanding time of a client's problems.&lt;/p&gt;
+&lt;p&gt;The effect I'm bringing here is a bit reminiscent of the native "reader" modes of browsers that allow you to get rid of all the visual superfluity to offer only the content to be read, presented in a more optimal way.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;user-content-block&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;font-weight&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;bold&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;font-size&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;19&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;width&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="kt"&gt;%&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;margin&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;auto&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;How to inject CSS on any page&lt;/h3&gt;
+&lt;p&gt;You can inject CSS on any page using browsers extensions.
+When I got this idea, I was using Firefox, so I used the &lt;a href="https://addons.mozilla.org/en-US/firefox/addon/styl-us/"&gt;Stylus&lt;/a&gt; extension.&lt;/p&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Because when I'm reading a support ticket, I'm not interested in the visual superfluity of the page, I'm interested in the content of the ticket.
+Improving the readability of the ticket is a way for me to consume less energy and time to understand the problem.
+If it does that for me, it will probably do that for others too.&lt;/p&gt;
+&lt;p&gt;Applying this principle to a whole organisation can certainly have a positive impact on the productivity of the support team.&lt;/p&gt;</content><category term="UX/UI"></category><category term="UX"></category><category term="UI"></category><category term="Jira"></category><category term="support"></category><category term="IT"></category><category term="ticketing"></category><category term="ticket"></category><category term="problem"></category><category term="understanding"></category><category term="client"></category><category term="user"></category><category term="user experience"></category><category term="user interface"></category></entry><entry><title>How to have a devlopment server locally for Pelican</title><link href="https://www.impavi.de/pelican-devlopment-server.html" rel="alternate"></link><published>2022-10-11T00:00:00+02:00</published><updated>2022-10-11T00:00:00+02:00</updated><author><name>Daniel Muyshond</name></author><id>tag:www.impavi.de,2022-10-11:/pelican-devlopment-server.html</id><summary type="html">&lt;p&gt;How to have a devlopment server running locally with Pelican&lt;/p&gt;</summary><content type="html">&lt;h2&gt;The method using make devserver mentionned on the older Pelican documentation&lt;/h2&gt;
+&lt;p&gt;Simply run the following command at the root of your Pelican project, where the &lt;code&gt;Makefile&lt;/code&gt; file is located:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;make devserver
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This will start a development server on port 8000. You can access it by going to &lt;a href="http://localhost:8000"&gt;http://localhost:8000&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can also specify a different port by running the following command:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;make devserver PORT=8080
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;It can be useful if you already have a server running on port 8000.&lt;/p&gt;
+&lt;h2&gt;The method using pelican --listen --autoreload&lt;/h2&gt;
+&lt;p&gt;This method seems more recent and is mentionned on the Pelican documention.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;pelican&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;listen&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;autoreload&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;port&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;8181&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Note : &lt;code&gt;--port&lt;/code&gt; is optional, the default port is 8000.&lt;/p&gt;
+&lt;h3&gt;What if local server does not serve static files like CSS?&lt;/h3&gt;
+&lt;p&gt;You might have a problem with the static files like CSS not being served by the local server. This is probably because the &lt;code&gt;pelicanconf.py&lt;/code&gt; is configured with the same &lt;code&gt;SITEURL&lt;/code&gt; as the production settings set in &lt;code&gt;publishconf.py&lt;/code&gt;. You can fix this by changing the &lt;code&gt;SITEURL&lt;/code&gt; in the &lt;code&gt;pelicanconf.py&lt;/code&gt; file to &lt;code&gt;http://localhost:8000&lt;/code&gt; or &lt;code&gt;http://localhost:8181&lt;/code&gt; depending on the port you are using.&lt;/p&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Beginning with Pelican can be a bit tricky. I hope this article will help you to get started with Pelican.&lt;/p&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://docs.getpelican.com/en/stable/"&gt;Pelican documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.getpelican.com/en/stable/quickstart.html#developing-your-site"&gt;Pelican documentation - Quickstart&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.getpelican.com/en/stable/publish.html#site-generation"&gt;Pelican documentation - Site generation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Pelican Static Site Generator"></category><category term="pelican"></category><category term="python"></category><category term="it problems encountered"></category><category term="development"></category></entry><entry><title>Develop with the Minecraft font in your IDE</title><link href="https://www.impavi.de/develop-with-the-minecraft-font-in-your-ide-en.html" rel="alternate"></link><published>2022-10-09T00:00:00+02:00</published><updated>2022-10-09T00:00:00+02:00</updated><author><name>Daniel Muyshond</name></author><id>tag:www.impavi.de,2022-10-09:/develop-with-the-minecraft-font-in-your-ide-en.html</id><summary type="html">&lt;p&gt;You can use the Minecraft font in your IDE, it's pretty cool.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Minecraft font in your IDE&lt;/h2&gt;
+&lt;p&gt;I just found out that you can use the Minecraft font in your IDE, it's pretty cool.&lt;/p&gt;
+&lt;h2&gt;Where to find the Minecraft font&lt;/h2&gt;
+&lt;p&gt;You can find the Minecraft font on &lt;a href="https://www.dafont.com/minecraft.font"&gt;this website&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;daniel&lt;/span&gt;&lt;span class="nv"&gt;@debian&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="k"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;share&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;mkdir&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;fonts&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;daniel&lt;/span&gt;&lt;span class="nv"&gt;@debian&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="k"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;share&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;cd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;daniel&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Téléchargements&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;daniel&lt;/span&gt;&lt;span class="nv"&gt;@debian&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;Téléchargements&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;mv&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Monocraft&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;otf&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="k"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;share&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;fonts&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;Conclusionabout the Monocraft font in VSCode&lt;/h2&gt;
+&lt;p&gt;It is fun but it is not very useful in my opinion since it is barely readable.&lt;/p&gt;
+&lt;p&gt;Source :
+https://github.com/IdreesInc/Monocraft#linux&lt;/p&gt;</content><category term="General development tricks"></category><category term="python"></category><category term="IDE"></category><category term="Minecraft"></category><category term="font"></category><category term="code"></category><category term="programming"></category></entry><entry><title>How to upgrade Pelican to the latest version</title><link href="https://www.impavi.de/how-to-upgrade-pelican-to-the-latest-version-en.html" rel="alternate"></link><published>2022-10-09T00:00:00+02:00</published><updated>2022-10-09T00:00:00+02:00</updated><author><name>Daniel Muyshond</name></author><id>tag:www.impavi.de,2022-10-09:/how-to-upgrade-pelican-to-the-latest-version-en.html</id><summary type="html">&lt;p&gt;You did not open your pelican repository since a long time and maybe it's time to upgrade.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Upgrading pelican ssg python package&lt;/h2&gt;
+&lt;p&gt;Here is the command to get &lt;a href="https://docs.getpelican.com/en/latest"&gt;the latest pelican version&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;python -m pip install --upgrade pelican
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;source : https://docs.getpelican.com/en/latest/install.html#upgrading&lt;/p&gt;</content><category term="Pelican Static Site Generator"></category><category term="python"></category><category term="ssg"></category><category term="pelican"></category><category term="upgrade"></category><category term="package"></category><category term="pip"></category></entry><entry><title>How to Fetch YouTube subs using Python and youtube-transcript-api (pip pkg)</title><link href="https://www.impavi.de/how-to-fetch-youtube-subs-using-python-and-youtube-transcript-api-pip-pkg-en.html" rel="alternate"></link><published>2022-06-09T00:00:00+02:00</published><updated>2022-06-09T00:00:00+02:00</updated><author><name>Daniel Muyshond</name></author><id>tag:www.impavi.de,2022-06-09:/how-to-fetch-youtube-subs-using-python-and-youtube-transcript-api-pip-pkg-en.html</id><summary type="html">&lt;p&gt;It is a small test of that python package that allows to fetch YouTube subtitles, even if they are automated, which is pretty cool.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Fetching subtitles (even the automated ones!)&lt;/h2&gt;
+&lt;p&gt;Here is the code snippet I just made trying out that amazing package :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;youtube_transcript_api&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;YouTubeTranscriptApi&lt;/span&gt;
+
+&lt;span class="n"&gt;video_id&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;What is the id of the video (after &amp;quot;watch?v=&amp;quot;)? : &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;transcription&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;YouTubeTranscriptApi&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_transcript&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;video_id&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;#  print(transcription)&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;el&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;el&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;text&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;You can also add the languages param&lt;/span&gt;
+&lt;span class="sd"&gt;if you want to make sure the transcripts&lt;/span&gt;
+&lt;span class="sd"&gt;are retrieved in your desired language&lt;/span&gt;
+&lt;span class="sd"&gt;(it defaults to english).&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;# YouTubeTranscriptApi.get_transcripts(video_ids, languages=[&amp;#39;de&amp;#39;, &amp;#39;en&amp;#39;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;It is a small test of that python package that allows to fetch YouTube subtitles, even if they are automated, which is pretty cool.
+That can certainly be usefull for content creators and semi-automated content creation.&lt;/p&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;p&gt;https://pypi.org/project/youtube-transcript-api/&lt;/p&gt;</content><category term="Python tricks, automation and web scraping"></category><category term="python"></category><category term="web"></category><category term="YouTube"></category><category term="Transcription"></category><category term="video"></category><category term="subtitles"></category></entry><entry><title>Mon premier blog post automatisé</title><link href="https://www.impavi.de/mon-premier-blog-post-automatise.html" rel="alternate"></link><published>2022-05-22T00:00:00+02:00</published><updated>2022-10-16T12:09:00+02:00</updated><author><name>Daniel Muyshond</name></author><id>tag:www.impavi.de,2022-05-22:/mon-premier-blog-post-automatise.html</id><summary type="html">&lt;p&gt;J'ai suivi un guide pour configurer l'intégration continue automatique (CD) d'un site web statique généré par Pelican (Python) sur GitHub Pages en utilisant les GitHub Actions.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Ceci est mon premier blog post automatisé&lt;/h2&gt;
+&lt;p&gt;Il est délivré à l'aide &lt;a href="https://www.python.org/"&gt;Python&lt;/a&gt; et &lt;a href="https://getpelican.com/"&gt;Pelican&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Il est généré automatiquement à partir d'un fichier écrit en &lt;a href="https://www.markdownguide.org/"&gt;Markdown&lt;/a&gt; et hébergé par &lt;a href="https://pages.github.com/"&gt;GitHub Pages&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;La production de ce contenu est assistée par &lt;a href="https://code.visualstudio.com/"&gt;VSCode&lt;/a&gt; et &lt;a href="https://github.com/features/copilot"&gt;GitHub Copilot&lt;/a&gt;.&lt;/p&gt;</content><category term="Articles en français · Les états « Dan » (états d'âme) (blog)"></category><category term="personnal thoughts"></category><category term="github"></category><category term="python"></category><category term="pelican"></category></entry></feed>
