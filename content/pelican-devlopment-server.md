@@ -1,7 +1,7 @@
 Title: How to have a devlopment server locally for Pelican
 Date: 2022-10-11
 Category: Pelican Static Site Generator
-Tags: pelican, python, it problems encountered, development
+Tags: pelican, python, it problems encountered, development, article en français
 Slug: pelican-devlopment-server
 Author: Daniel Muyshond
 Summary: How to have a devlopment server running locally with Pelican

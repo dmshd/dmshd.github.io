@@ -1,7 +1,7 @@
 Title: How to prind out text from a generated pdf file in Python with pdfplumber
 Date: 2022-10-16 14:20
 Category: Python tricks, automation and web scraping
-Tags: pdfplumber, pdf, python, automation, text extraction, pdf text extraction, pdf text extraction python, pdf text extraction python pdfplumber
+Tags: pdfplumber, pdf, python, automation, text extraction, pdf text extraction, pdf text extraction python, pdf text extraction python pdfplumber, article in english
 Author: Daniel Muyshond
 Summary: How to print out text from a generated pdf file in Python with pdfplumber
 Lang: en

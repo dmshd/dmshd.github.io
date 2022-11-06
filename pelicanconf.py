@@ -39,3 +39,5 @@ THEME = 'themes/mycurrentidea'
 #RELATIVE_URLS = True
 
 DISPLAY_PAGES_ON_MENU = True
+STATIC_PATHS = ['images', 'extra/CNAME']
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}, 'extra/favicon.ico': {'path': 'favicon.ico'},}

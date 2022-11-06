@@ -1,7 +1,7 @@
 Title: How I improved my understanding time of a client's problems in Jira
 Date: 2022-10-11
 Category: UX/UI
-Tags: UX, UI, Jira, support, IT, ticketing, ticket, problem, understanding, client, user, user experience, user interface
+Tags: UX, UI, Jira, support, IT, ticketing, ticket, problem, understanding, client, user, user experience, user interface, article in english
 Author: Daniel Muyshond
 Summary: I injected my own CSS code snippet in the Jira support page to improve my understanding time of a client's problems.
 Lang: en

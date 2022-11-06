@@ -22,6 +22,6 @@ DISQUS_SITENAME = "https-www-impavi-de"
 GOOGLE_ANALYTICS = "UA-139715834-1"
 
 STATIC_PATHS = ['images', 'extra/CNAME']
-EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}, 'extra/favicon.ico': {'path': 'favicon.ico'},}
 
 DISPLAY_PAGES_ON_MENU = True

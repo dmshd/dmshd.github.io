@@ -1,7 +1,7 @@
 Title: How to scrap favicon from a website using Python
 Date: 2022-10-16 14:26
 Category: Python tricks, automation and web scraping
-Tags: python, web, favicon, scraping
+Tags: python, web, favicon, scraping, article in english
 Author: Daniel Muyshond
 Summary: I was tired of having to manually download favicons from websites, so I made a small script to do it for me.
 Lang: en

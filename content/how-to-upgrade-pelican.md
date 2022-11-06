@@ -1,7 +1,7 @@
 Title: How to upgrade Pelican to the latest version
 Date: 2022-10-09
 Category: Pelican Static Site Generator
-Tags: python, ssg, pelican, upgrade, package, pip
+Tags: python, ssg, pelican, upgrade, package, pip, article in english
 Author: Daniel Muyshond
 Summary: You did not open your pelican repository since a long time and maybe it's time to upgrade.
 Lang: en
