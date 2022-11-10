@@ -2,7 +2,6 @@ Magnani beginner clarinet exercise to achieve better sounding notes
 ###################################################################
 
 :date: 2022-11-04 13:50
-:modified: 2010-10-04 18:40
 :tags: clarinet, etudes, music, magnani, article in english
 :category: Music · Clarinet
 :slug: magnani-beginner-clarinet-exercise-to-achieve-better-sounding-notes

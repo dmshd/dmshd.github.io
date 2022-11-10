@@ -26,3 +26,19 @@ This is a list of clarinet etudes that I have found useful in my clarinet studie
 ### List of Baermann etudes
 
 ### Herfurth etudes
+
+### Jeanjean etudes
+
+### Jacques lancelot
+
+https://youtu.be/HP-pb6HlcSI
+
+### Hul etudes
+
+### F. Demnitz studies
+
+#### 18 Expressive studies by F. Demnitz
+
+##### Adagio (A minor) by F. Demnitz
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OO1hGkvt5m0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
