@@ -47,4 +47,4 @@ Vous allez probablement entendre parler d'Alameda. Il s'agit d'un market-maker, 
 Conclusion
 ----------
 
-
+https://threadreaderapp.com/thread/1590081564494336000.html
